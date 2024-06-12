@@ -1,0 +1,152 @@
+@use "mixins" as mx;
+
+// @keyframes card-open-animation {
+//     0% {
+//         border-width: 2px;
+//         opacity: 0;
+//     }
+//     50% {
+//         border-width: 0px;
+//         max-width: 100%;
+//         opacity:1;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 2px var(--main-color) solid;
+    border-radius: 15px;
+    min-width: 10%;
+
+    transition:
+        transform 0.15s ease-out,
+        border-width 0.8s ease-out;
+        // min-width 1s ease-out;
+
+    &:hover {
+        transform: scale(0.95);
+    }
+
+    &__link {
+        --size: 270px;
+        width: var(--size);
+        height: calc(var(--size)*1.1);
+
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+        padding: 15px;
+        text-align: center;
+        cursor: pointer;
+
+        // &:hover {
+        //     filter: none;
+        //     // transform: scale(0.95);
+        // }
+    }
+
+    &__caption {
+        @include mx.cool-font;
+        font-size: 2.5rem;
+        color: var(--secondary-color)
+    }
+
+    &__content {
+        max-height: 0px;
+        max-width: 0px;
+        overflow: hidden;
+
+        font-size: var(--p-font-size);
+        padding: 10px;
+
+        // animated
+        opacity: 0;
+
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-out 0.3s, transform 0.3s ease-out 0.3s;
+    }
+
+    &--opened {
+        min-width: 100%;
+        border-width: 0px;
+        order: -1;
+    }
+
+    &--opened>&__content {
+        max-height: 2000px;
+
+        // animated
+        opacity: 1;
+        max-width: 2000px;
+        transform: translateY(0px);
+    }
+
+    &--opened>&__link {
+        margin: auto;
+    }
+
+    &--opened:hover {
+        transform: scale(1);
+    }
+
+    .material-symbols-outlined {
+        color: var(--main-color);
+        font-size: 10rem;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 200,
+            'GRAD' 0,
+            'opsz' 24
+    }
+}
+
+
+.card-link {
+    --size: 270px;
+    width: var(--size);
+    height:calc(var(--size)*1.1);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    padding: 15px;
+    text-align: center;
+    border: 2px var(--main-color) solid;
+    border-radius: 15px;
+    transition: transform 0.15s ease-in;
+
+    &__caption {
+        @include mx.cool-font;
+        font-size: 2.5rem;
+        color: var(--secondary-color)
+    }
+
+    &:hover {
+        filter: none;
+        transform: scale(0.95);
+    }
+
+    &:hover .material-symbols-outlined{
+        filter: brightness(150%); 
+    }
+
+
+    .material-symbols-outlined {
+        transition: filter 0.15s ease-in;
+        color: var(--main-color);
+        font-size: 10rem;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 200,
+            'GRAD' 0,
+            'opsz' 24
+    }    
+}

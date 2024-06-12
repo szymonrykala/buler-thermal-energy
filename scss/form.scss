@@ -1,0 +1,26 @@
+.form {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+
+    label {
+        display: none;
+    }
+
+    input,
+    textarea {
+        font-size: var(--p-font-size);
+        height: 30px;
+        padding: 15px;
+        border: 2px var(--secondary-color) solid;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: row;
+        justify-items: stretch;
+        gap: 10px;
+    }
+}

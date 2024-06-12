@@ -1,0 +1,56 @@
+@use "mixins" as mx;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@import url("./vars.css");
+@import url("./layout.css");
+@import url("./navigation.css");
+@import url("./card.css");
+@import url("./form.css");
+@import url("./components.css");
+
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    color: var(--main-font-color);
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+#firma {
+    img {
+        height: 430px;
+        background-blend-mode: darken;
+        filter: opacity(0.85);
+    }
+
+    p {
+        max-width: 800px;
+        min-width: 100%;
+    }
+}
+
+#homepage {
+    z-index: 1001;
+}
