@@ -16,7 +16,6 @@ function handleSideNav() {
 function handleHarmonica() {
 
     const sections = document.querySelectorAll(".harmonic__section > .harmonic__title");
-    console.log(sections)
 
     function closeSelected(clickedElement) {
         sections.forEach(section => {
@@ -37,17 +36,23 @@ function handleHarmonica() {
 }
 
 
-function handleCardClass() {
-    const cards = document.querySelectorAll(".card")
-    cards.forEach(card => {
-        card.querySelector(".card__link").addEventListener("click", () => card.classList.toggle("card--opened"))
+function handleFoldedSection() {
+    const sections = document.querySelectorAll(".page.page--folded")
+    console.log(sections)
+
+    sections.forEach(section => {
+        console.log(section)
+        section.querySelector(".page__gradient.page__gradient--bottom").addEventListener("click", () => {
+            section.classList.add("page--unfolded")
+            section.classList.remove("page--folded")
+        })
     })
 }
 
 function main() {
     // handleSideNav();
     handleHarmonica();
-    handleCardClass();
+    handleFoldedSection();
 }
 
 window.addEventListener("load", main);
