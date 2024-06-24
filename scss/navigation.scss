@@ -1,4 +1,4 @@
-
+@use "mixins" as mx;
 
 .top-nav {
     display: flex;
@@ -10,15 +10,16 @@
     top: 0px;
     height: 80px;
     padding: 1vh 1vw;
-    background-color: var(--low-opacity-background-color);
-    background-blend-mode: overlay;
+    background-color: rgba(var(--background-color-rgb), 0.83);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     &__logo {
         display: flex;
         flex-direction: row;
         align-items: center;
         color: var(--main-color);
-        font-size: 2rem;
+        font-size: calc(var(--p-font-size) + 0.8rem);
 
         img {
             width: 50px;
@@ -32,8 +33,48 @@
         flex-direction: row;
         align-items: center;
         gap: 3vw;
-        font-size: 2.2rem;
+        font-size: calc(var(--p-font-size) + 0.8rem);
 
+        &>li {
+            position: relative;
+        }
+    }
+
+    &__links>li:hover>&__submenu {
+        opacity: 1 !important;
+        // display: block;
+        max-height: 999px;
+        transform: translateY(0px);
+    }
+
+    &__submenu {
+        display: flex;
+        flex-flow: column;
+        gap: 5px 0px;
+        position: absolute;
+        left: -15px;
+        list-style: none;
+        width: 300px;
+        background-color: rgba(var(--paper-color-rgb), 0.83);
+        margin-top: 15px;
+        transform: translateY(50px);
+        transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, max-height 0.2s;
+        opacity: 0;
+        max-height: 0px;
+        overflow-y: hidden;
+        font-size: calc(var(--p-font-size) + 0.5rem);
+
+        &>li>a {
+            @include mx.cool-font;
+            padding: 15px;
+            display: block;
+            background-color: rgba(var(--paper-color-rgb), 0.83);
+            font-size: inherit;
+
+            &:hover {
+                filter: brightness(1.5);
+            }
+        }
     }
 
     &__menu-button {}

@@ -1,19 +1,37 @@
-
 :root {
     // Colors
-    --main-color: rgb(251, 135, 80);
-    --secondary-color: rgb(143, 134, 216);
-
-    --background-color: rgb(15, 15, 15);
-    --opacity-background-color: rgba(15, 15, 15, 0.75);
-    --low-opacity-background-color: rgba(15, 15, 15, 0.9);
-
-    --paper-color: rgb(30, 30, 30);
     
-    // text color
-    --main-font-color: rgb(220, 220, 220);
-
-    // text settings
     --p-font-size: 1.6rem;
     --text-spacing: 30px;
+
+    --max-page-content-width: 1200px;
+    
+    
+    // dark theme
+    --main-color-rgb: 230, 125, 80;
+    --secondary-color-rgb: 133, 124, 206;
+
+    --background-color-rgb: 15, 15, 15;
+    --paper-color-rgb: 30, 30, 30;
+    // --paper-color-rgb: 0, 90, 135;
+    // --paper-color-rgb: 130, 130, 130;
+    
+    --main-color: rgb(var(--main-color-rgb));
+    --secondary-color: rgb(var(--secondary-color-rgb));
+
+    --paper-color: rgb(var(--paper-color-rgb), 1);
+    --background-color: rgba(var(--background-color-rgb), 1);
+
+    --main-font-color: rgb(240, 240, 240);
+
+
+    // // light theme
+    // --background-color-rgb: 240, 240, 240;
+    // --paper-color-rgb: 220, 220, 220;
+
+    // --paper-color: rgb(var(--paper-color-rgb), 1);
+    // --background-color: rgba(var(--background-color-rgb), 1);
+
+    // --main-font-color: rgb(10, 10, 10);
+
 }

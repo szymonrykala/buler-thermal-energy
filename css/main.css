@@ -6,12 +6,19 @@
 @import url("./card.css");
 @import url("./form.css");
 @import url("./components.css");
+@import url("./spec-view.css");
 * {
   text-decoration: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+}
+
+li, p, h2, h3, h4, h5, h6 {
+  line-height: var(--text-spacing);
+  word-spacing: 3px;
+  letter-spacing: 1px;
 }
 
 body {
@@ -43,4 +50,18 @@ html {
 
 #homepage {
   z-index: 1001;
+}
+
+.cascade-img {
+  font-size: var(--p-font-size);
+  position: relative;
+}
+.cascade-img > p:first-of-type {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+#direct-radiatmion-heatpump-icon {
+  transform: rotateY(-30deg) rotateX(60deg) scale(1.5);
 }

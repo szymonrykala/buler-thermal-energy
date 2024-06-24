@@ -1,0 +1,23 @@
+.spec {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: stretch;
+}
+.spec__params {
+  width: 65%;
+}
+.spec__select-container {
+  width: 35%;
+}
+.spec__select-item {
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid var(--main-color);
+}
+.spec__select-iteminput {
+  appearance: none;
+}
+.spec__select-iteminput:checked {
+  background-color: var(--paper-color);
+}

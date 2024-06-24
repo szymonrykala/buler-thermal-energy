@@ -13,7 +13,7 @@
     gap: 2vh;
     padding: 15px;
     text-align: center;
-    border: 2px var(--main-color) solid;
+    border: 5px var(--main-color) groove;
     border-radius: 15px;
     transition: transform 0.15s ease-in;
 
@@ -24,7 +24,7 @@
     }
 
     &:hover {
-        filter: none;
+        // filter: none;
         transform: scale(0.95);
     }
 

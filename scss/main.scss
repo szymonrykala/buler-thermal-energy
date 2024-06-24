@@ -9,6 +9,7 @@
 @import url("./card.css");
 @import url("./form.css");
 @import url("./components.css");
+@import url("./spec-view.css");
 
 
 * {
@@ -19,6 +20,13 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+
+// Font settings
+li,p,h2,h3,h4,h5,h6{
+    line-height: var(--text-spacing);
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
 
 body {
     overflow-x: hidden;
@@ -53,4 +61,21 @@ html {
 
 #homepage {
     z-index: 1001;
+}
+
+// CUSTOM ELEMENTS
+.cascade-img{
+    font-size: var(--p-font-size);
+    position: relative;
+
+    > p:first-of-type{
+        position: absolute;
+        top:35%;
+        right:25%;
+        // text-align: center;
+    }
+}
+
+#direct-radiatmion-heatpump-icon{
+    transform: rotateY(-30deg) rotateX(60deg) scale(1.5);
 }
