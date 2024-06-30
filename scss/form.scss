@@ -1,3 +1,5 @@
+@use "mixins" as mx;
+
 @mixin required_mark {
     content: "*";
     color: var(--main-color);
@@ -8,9 +10,7 @@
     --sections-gap: 40px;
 
     font-size: var(--p-font-size);
-    display: flex;
-    flex-direction: column;
-    gap: var(--sections-gap);
+    // gap: var(--sections-gap);
 
     label,
     [type=radio] {
@@ -18,7 +18,9 @@
     }
 
     input,
+    select,
     textarea {
+        width: 100%;
         background-clip: padding-box;
         background-color: var(--paper-color);
         color: var(--main-font-color);
@@ -33,14 +35,15 @@
         }
     }
 
-    input {
+    input,
+    select {
         line-height: 1;
         margin-bottom: 0;
         padding: 11px 15px;
         transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
         &[type=range] {
-            --size: 15px;
+            --size: 30px;
 
             -webkit-appearance: none;
             appearance: none;
@@ -55,6 +58,14 @@
             padding: 5px;
             line-height: normal;
             height: var(--size);
+
+            @media only screen and (min-width: mx.$md) {
+                --size: 25px;
+            }
+
+            @media only screen and (min-width: mx.$lg) {
+                --size: 15px;
+            }
 
             #range1::-webkit-slider-runnable-track {
                 height: var(--size);
@@ -138,16 +149,12 @@
 
     &__section {
         border: none;
-        display: flex;
-        flex-flow: column;
-        gap: 10px;
 
         &--inner {
-            display: flex;
-            flex-flow: column;
+            max-width: 100%;
             border-left: 1px solid var(--main-color);
-            padding: 20px 0px 0px 25px;
-            margin-left: 7px;
+            padding: 15px 0px 0px 15px;
+            margin-left: 8px;
             gap: var(--sections-gap);
         }
 
@@ -160,14 +167,9 @@
         }
     }
 
-    &__section_title {
-        font-size: calc(var(--p-font-size) + 0.3rem);
-
-    }
-
     &__group_title {
         font-weight: normal;
-        font-size: calc(var(--p-font-size) + 0.2rem);
+        font-size: var(--p-font-size);
 
         &--req::after {
             @include required_mark;
@@ -209,7 +211,6 @@
 
     &__input {
         width: 100%;
-        min-width: 300px;
 
         input:not([type=radio]):not([type=checkbox])+label,
         input:not([type=radio]):not([type=checkbox]):not([type=file]) {
@@ -217,7 +218,7 @@
         }
 
         input:not([type=radio]):not([type=checkbox]),
-        textarea {
+        textarea, select {
             margin-top: 10px;
             width: 100%;
         }
@@ -236,19 +237,27 @@
             }
         }
 
+        input[type=date] {
+            display: block;
+        }
+
         &--req label::after {
             @include required_mark;
         }
     }
 }
 
-// Dynamic form logic
-.individual_project_file_dynamic_group,
-.predefined_project_name_dynamic_group,
-.new_buildling_dynamic_section {
-    display: none;
 
-    &--opened {
-        display: flex;
-    }
-}
+
+// Dynamic form logic
+// .individual_project_file_dynamic_group,
+// .predefined_project_name_dynamic_group,
+// .new_buildling_dynamic_section,
+// .another-building-type-detail-section,
+// .existing_buildling_dynamic_section-xx {
+//     display: none;
+
+//     &.--opened {
+//         display: flex;
+//     }
+// }

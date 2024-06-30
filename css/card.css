@@ -1,36 +1,83 @@
+.card__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+@media only screen and (min-width: 768px) {
+  .card__container {
+    gap: 3vw;
+  }
+}
+
 .card {
-  --size: 270px;
+  --size: 40vw;
   width: var(--size);
   height: calc(var(--size) * 1);
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  gap: 2vh;
-  padding: 15px;
+  gap: 10px;
+  padding: 5px;
   text-align: center;
   border: 5px var(--main-color) groove;
   border-radius: 15px;
-  transition: transform 0.15s ease-in;
+  transition: transform 0.2s ease, box-shadow 0.2s;
+  background-color: rgba(0, 0, 0, 0);
 }
 .card__caption {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: italic;
-  letter-spacing: 3px;
-  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font-size: 4vw;
   color: var(--secondary-color);
-}
-.card:hover {
-  transform: scale(0.95);
-}
-.card:hover .material-symbols-outlined {
-  filter: brightness(150%);
+  line-height: normal;
 }
 .card .material-symbols-outlined {
-  transition: filter 0.15s ease-in;
+  transition: filter 0.2s ease;
   color: var(--main-color);
-  font-size: 10rem;
+  font-size: 6rem;
   font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+.card:hover, .card:active {
+  transform: scale(0.95);
+  box-shadow: -1px 1px 25px 0px rgba(var(--main-color-rgb), 0.4);
+  -webkit-box-shadow: -1px 1px 25px 0px rgba(var(--main-color-rgb), 0.4);
+  -moz-box-shadow: -1px 1px 25px 0px rgba(var(--main-color-rgb), 0.4);
+}
+.card:hover .material-symbols-outlined, .card:active .material-symbols-outlined {
+  filter: brightness(150%);
+}
+@media only screen and (min-width: 576px) {
+  .card {
+    --size: 35vw;
+    max-width: 250px;
+  }
+  .card__caption {
+    font-size: 2.3rem;
+  }
+  .card .material-symbols-outlined {
+    font-size: 10rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    --size: 270px;
+    max-width: unset;
+    padding: 15px;
+  }
+  .card__caption {
+    font-size: 2.5rem;
+  }
+  .card .material-symbols-outlined {
+    font-size: 10rem;
+  }
 }

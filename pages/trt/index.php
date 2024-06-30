@@ -3,7 +3,7 @@
 
 <head>
     <?php require_once("./components/header_links.html") ?>
-    <title>W realizacji - BTE</title>
+    <title>BTE - Pomiary TRT</title>
 </head>
 <?php require_once("./components/google_tags.html") ?>
 
@@ -11,7 +11,9 @@
     <?php require_once("./components/navigation.php") ?>
 
     <main>
-        <?php require_once("./components/sections/in_realization.html") ?>
+        <?php require_once("./pages/trt/sections.html") ?>
+
+        <?php require_once("./components/contact.html") ?>
     </main>
 
     <?php require_once("./components/footer.php") ?>

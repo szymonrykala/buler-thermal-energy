@@ -12,11 +12,11 @@
 
 <body>
     <?php require_once("./components/navigation.php") ?>
-    <?php require_once("./components/sections/main/header.html") ?>
+    <?php require_once("./pages/home/header.html") ?>
 
     <main>
-        <?php require_once("./components/sections/main/index.html") ?>
-        <?php require_once("./components/sections/contact.html") ?>
+        <?php require_once("./pages/home/sections.html") ?>
+        <?php require_once("./components/contact.html") ?>
     </main>
 
     <?php require_once("./components/footer.php") ?>

@@ -9,16 +9,15 @@ if (!in_array($_SERVER["SERVER_NAME"], ["127.0.0.1", "localhost"])) {
 $uri = $_SERVER["REQUEST_URI"];
 // $query_string = $_SERVER["QUERY_STRING"];
 
-$views_catalog = "./views/";
+$views_catalog = "./pages/";
 
 $view = match (true) {
-    str_starts_with($uri, "/magazyny-energii") => "magazyny_energii.php",
-    str_starts_with($uri, "/pompy-ciepla") => "pompy_ciepla.php",
-    str_starts_with($uri, "/w-realizacji") => "w_realizacji.php",
-    str_starts_with($uri, "/pomiary-trt") => "pomiary_trt.php",
-    str_starts_with($uri, "/") => "index.php",
+    str_starts_with($uri, "/magazyny-energii") => "magazyny/index.php",
+    str_starts_with($uri, "/pompy-ciepla") => "pompy/index.php",
+    str_starts_with($uri, "/w-realizacji") => "w-realizacji/index.php",
+    str_starts_with($uri, "/pomiary-trt") => "trt/index.php",
+    str_starts_with($uri, "/") => "home/index.php",
     true => "index.php"
 };
-
 
 require_once($views_catalog . $view);

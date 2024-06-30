@@ -10,6 +10,7 @@
 @import url("./form.css");
 @import url("./components.css");
 @import url("./spec-view.css");
+@import url("./bootstrap-grid.css");
 
 
 * {
@@ -22,9 +23,15 @@
 
 
 // Font settings
-li,p,h2,h3,h4,h5,h6{
+li,
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
     line-height: var(--text-spacing);
-    word-spacing: 3px;
+    // word-spacing: 3px;
     letter-spacing: 1px;
 }
 
@@ -46,9 +53,32 @@ html {
     visibility: hidden;
 }
 
+fieldset{
+    border: none;
+}
+
+.img {
+    --w: 100%;
+    --h: 40vh;
+
+    max-width: var(--w);
+    max-height: var(--h);
+
+    @for $i from 3 through 9 {
+        &-w#{$i}0 {
+            --w: calc(#{$i} * 10%)
+        }
+    }
+
+    @for $i from 2 through 6 {
+        &-h#{$i}0 {
+            --h: calc(#{$i} * 10vh)
+        }
+    }
+}
+
 #firma {
     img {
-        height: 430px;
         background-blend-mode: darken;
         filter: opacity(0.85);
     }
@@ -63,19 +93,39 @@ html {
     z-index: 1001;
 }
 
+.center-block {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
 // CUSTOM ELEMENTS
-.cascade-img{
-    font-size: var(--p-font-size);
+.cascade-img {
+    font-size: calc(var(--p-font-size) - 0.5rem);
     position: relative;
 
-    > p:first-of-type{
+    >p:first-of-type {
         position: absolute;
-        top:35%;
-        right:25%;
-        // text-align: center;
+        top: 30%;
+        right: 20%;
+    }
+    @media only screen and (min-width: mx.$sm) {
+        >p:first-of-type {
+            top: 30%;
+            right: 25%;
+        }
+    }
+
+    @media only screen and (min-width: mx.$md) {
+        font-size: calc(var(--p-font-size) - 0.3rem);
     }
 }
 
-#direct-radiatmion-heatpump-icon{
+#direct-radiatmion-heatpump-icon {
     transform: rotateY(-30deg) rotateX(60deg) scale(1.5);
 }
