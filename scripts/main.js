@@ -1,20 +1,38 @@
-
+FORM_API_URL = "http://macbook-air.home/handlers"
 
 
 function handleSideNav() {
-    const sideNav = document.getElementById("side-nav")
-    const sideNavOpenBtn = document.getElementById("side-nav-open-btn")
-    const sideNavCloseBtn = document.getElementById("side-nav-close-btn")
+    const sideNav = document.querySelector(".side-nav");
+    const navOpenBtn = document.querySelector(".top-nav__menu-button");
 
-    toggleNavOpen = () => sideNav.classList.toggle("--open")
+    const linkClickHandler = () => {
+        console.debug("link click")
+        closeNav()
+    }
 
-    sideNavOpenBtn.addEventListener("click", toggleNavOpen)
-    sideNavCloseBtn.addEventListener("click", toggleNavOpen)
+    function openNav() {
+        sideNav.classList.add("side-nav--open")
+        navOpenBtn.classList.add("top-nav__menu-button--opened")
+        sideNav.addEventListener("click", linkClickHandler)
+    }
+
+    function closeNav() {
+        sideNav.classList.remove("side-nav--open")
+        navOpenBtn.classList.remove("top-nav__menu-button--opened")
+        sideNav.removeEventListener("click", linkClickHandler)
+    }
+
+    navOpenBtn.addEventListener("click", () => {
+        if (sideNav.classList.contains("side-nav--open")) {
+            closeNav()
+        } else {
+            openNav()
+        }
+    })
 }
 
 
 function handleHarmonica() {
-
     const sections = document.querySelectorAll(".harmonic__section > .harmonic__title");
 
     function closeSelected(clickedElement) {
@@ -36,98 +54,56 @@ function handleHarmonica() {
 }
 
 
-function handleFoldedSection() {
-    const sections = document.querySelectorAll(".page.page--folded")
+function handleForm(formSelector, apiUrl) {
+    const form = document.querySelector(formSelector);
 
-    function handler(selectedSection) {
-        sections.forEach(section => {
-            if (section != selectedSection) {
-                section.classList.add("page--folded")
-            } else {
-                section.classList.remove("page--folded")
-            }
+    async function handle(event) {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        console.debug("Form data:", Object.fromEntries(formData));
+
+        const resp = await fetch(apiUrl, {
+            method: "POST",
+            body: JSON.stringify(Object.fromEntries(formData)),
+            mode: "same-origin",
+            credentials: "same-origin",
+            timeout: 180,
+            headers: new Headers({
+                "Content-Type": "application/json",
+            })
         });
-    }
 
-    sections.forEach(section => {
-        section.querySelector(".page__gradient.page__gradient--bottom").addEventListener("click", () => handler(section))
-    });
-}
-
-function initializeRangeInput(id, prefix="") {
-    const input = document.querySelector(`#${id}`);
-    const value = document.querySelector(`label[for=${id}]`);
-    value.textContent = prefix + input.value;
-    input.addEventListener("input", (event) => value.textContent = prefix + event.target.value);
-}
-
-
-
-function initializeFormfields() {
-    function getMonth(date) {
-        month = date.getMonth() + 1
-        if (month < 10) {
-            month = `0${month}`
-        }
-        return new String(month)
-    }
-    const dateControls = document.querySelectorAll('input[type="date"]');
-    const today = new Date()
-    dateControls.forEach(control => {
-        control.value = control.min = `${today.getFullYear()}-${getMonth(today)}-${today.getDate()}`;
-    })
-
-
-    // range inputs
-    initializeRangeInput("garage_expected_temperature", prefix="Garaż: ")
-    initializeRangeInput("room_expected_temperature", prefix="Pokoje: ")
-
-}
-
-
-function handleDynamiHeatPumpOfferForm() {
-    const newBuildingRadio = document.querySelector("#new_buildling")
-    const buildingExists = document.querySelector("#building_exists")
-    const newBuildingDynamicSection = document.querySelector(".new_buildling_dynamic_section")
-
-    const predefinedProject = document.querySelector("#predefined_project")
-    const individualProject = document.querySelector("#individual_project")
-    const predefinedProjectNameDynamicGroup = document.querySelector(".predefined_project_name_dynamic_group")
-    const individualProjectFileDynamicGroup = document.querySelector(".individual_project_file_dynamic_group")
-
-    function handler() {
-        console.log("changed")
-        if (newBuildingRadio.checked) {
-            newBuildingDynamicSection.classList.add("new_buildling_dynamic_section--opened");
-        } else {
-            newBuildingDynamicSection.classList.remove("new_buildling_dynamic_section--opened");
-        }
-
-        if (predefinedProject.checked) {
-            predefinedProjectNameDynamicGroup.classList.add("predefined_project_name_dynamic_group--opened")
-        } else {
-            predefinedProjectNameDynamicGroup.classList.remove("predefined_project_name_dynamic_group--opened")
-        }
-
-        if (individualProject.checked) {
-            individualProjectFileDynamicGroup.classList.add("individual_project_file_dynamic_group--opened")
-        } else {
-            individualProjectFileDynamicGroup.classList.remove("individual_project_file_dynamic_group--opened")
+        try {
+            const body = await resp.json();
+            console.debug(resp)
+            switch (resp.status) {
+                case 200:
+                    window.alert(body.message);
+                    return;
+                default:
+                    window.alert("Coś nie zadziałało, przepraszamy i zachęcamy do skorzystania z numeru telefonu :)");
+            }
+        } catch (error) {
+            console.error(error)
         }
     }
 
-    [newBuildingRadio, buildingExists, predefinedProject, individualProject].forEach(radio => radio.addEventListener("change", handler))
+    form.addEventListener("submit", handle);
 }
-
 
 
 function main() {
-    // handleSideNav();
+    console.debug("start")
+    handleSideNav();
     handleHarmonica();
-    handleFoldedSection();
-    initializeFormfields();
-    handleDynamiHeatPumpOfferForm();
 
+    handleForm("#contact-form", FORM_API_URL.concat("/contact-form.php"));
+
+    document.querySelector("button[type=submit]")?.addEventListener("click", (e)=>{
+        e.preventDefault();
+        window.alert("Formularz nie zadziałał\nNapisz do mnie na biuro@bulerenergy.pl")
+    })
 }
 
 window.addEventListener("load", main);
