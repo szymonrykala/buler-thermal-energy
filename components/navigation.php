@@ -37,7 +37,15 @@ if ($_SERVER["REQUEST_URI"] === "/") {
         <li><a class="--cool-font" href="#kontakt">Kontakt</a></li>
     </ul>
 
-    <button class="top-nav__menu-button" ></button>
+    <button class="top-nav__menu-button">
+        <span id="close-icon">
+            <?php require_once("components/icons/close.svg") ?>
+        </span>
+        <span id="open-icon">
+            <?php require_once("components/icons/menu.svg") ?>
+        </span>
+
+    </button>
 </nav>
 
 <nav class="side-nav">
@@ -71,24 +79,11 @@ if ($_SERVER["REQUEST_URI"] === "/") {
     </ul>
 
     <div class="side-nav__icons">
-        <a href="tel:+">tel</a>
-        <a href="mailto:biuro@bulerenergy.pl">mail</a>
+        <a href="tel:+48664435690" class="material-symbols-outlined">
+            <?php require_once("components/icons/phone.svg") ?>
+        </a>
+        <a href="mailto:biuro@bulerenergy.pl" class="material-symbols-outlined">
+            <?php require_once("components/icons/email.svg") ?>
+        </a>
     </div>
 </nav>
-
-
-<!-- <nav id="side-nav" class="side-nav">
-        <header>
-            <a href="#homepage">Buler Thermal Energy</a>
-            <div id="side-nav-close-btn" class="menu-button --x">
-                <div id="top"></div>
-                <div id="middle"></div>
-                <div id="bottom"></div>
-            </div>
-        </header>
-        <ul>
-            <li><a href="#oferta">Oferta</a></li>
-            <li><a href="#firma">O firmie</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-    </nav> -->

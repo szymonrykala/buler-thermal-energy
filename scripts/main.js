@@ -3,19 +3,21 @@ function handleSideNav() {
     const sideNav = document.querySelector(".side-nav");
     const navOpenBtn = document.querySelector(".top-nav__menu-button");
 
-    const scrollHandler = event => {
-        console.debug("scrolling")
-        event.preventDefault();
+    const linkClickHandler = () => {
+        console.debug("link click")
+        closeNav()
     }
 
     function openNav(){
         sideNav.classList.add("side-nav--open")
-        document.addEventListener("scroll", scrollHandler)
+        navOpenBtn.classList.add("top-nav__menu-button--opened")
+        sideNav.addEventListener("click", linkClickHandler)
     }
 
     function closeNav(){
         sideNav.classList.remove("side-nav--open")
-        document.removeEventListener("scroll", scrollHandler)
+        navOpenBtn.classList.remove("top-nav__menu-button--opened")
+        sideNav.removeEventListener("click", linkClickHandler)
     }
 
     navOpenBtn.addEventListener("click", ()=>{
