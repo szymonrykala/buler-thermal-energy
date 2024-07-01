@@ -2,7 +2,12 @@
 
 declare(strict_types=1);
 
-if (!in_array($_SERVER["SERVER_NAME"], ["127.0.0.1", "localhost"])) {
+require_once("./handlers/tools.php");
+
+$s = new Session("MAILING_SESSION");
+
+
+if (!in_array($_SERVER["SERVER_NAME"], ["127.0.0.1", "localhost", "macbook-air.home"])) {
     error_reporting(E_ERROR | E_PARSE);
 }
 

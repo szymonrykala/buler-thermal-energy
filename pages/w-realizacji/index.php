@@ -5,12 +5,6 @@
     <?php require_once("./components/header_links.html") ?>
     <title>BTE - strona w realizacji</title>
 
-    <style>
-        .top-nav__links,
-        .footer>.container>.row.g-5.p-4 {
-            display: none;
-        }
-    </style>
 </head>
 <?php require_once("./components/google_tags.html") ?>
 
@@ -19,7 +13,7 @@
 
     <main>
         <?php
-        $content = file_get_contents("./components/contact.html");
+        $content = file_get_contents("./components/contact.php");
 
         echo str_replace(
             "Zachęcam do kontaktu",

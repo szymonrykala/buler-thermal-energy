@@ -13,7 +13,7 @@
     <main>
         <?php require_once("./pages/magazyny/sections.php") ?>
 
-        <?php require_once("./components/contact.html") ?>
+        <?php require_once("./components/contact.php") ?>
     </main>
 
     <?php require_once("./components/footer.php") ?>

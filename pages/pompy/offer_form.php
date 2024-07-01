@@ -443,7 +443,7 @@
                                 Zgadzam się na przetwarzanie podanych danych do celów marketingowych zgodnie z <a href="#">polityką prywatności</a>
                             </label>
                         </div>
-                        <div class="col g-recaptcha" data-sitekey="6Le-dvcpAAAAAAlMbuZCsSPbpcDDbzJ15kAwzNIj"></div>
+                        <!-- <div class="col g-recaptcha" data-sitekey="6Le-dvcpAAAAAAlMbuZCsSPbpcDDbzJ15kAwzNIj"></div> -->
                     </fieldset>
 
                     <div class="row">
