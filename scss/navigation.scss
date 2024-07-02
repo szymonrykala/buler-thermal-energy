@@ -1,6 +1,34 @@
 @use "mixins" as mx;
 
 
+.top-scroll {
+    --size: 50px;
+    width: var(--size);
+    height: var(--size);
+
+    z-index: 1000;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+
+    border-radius: 15px;
+    border: 2px var(--main-color) solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(var(--paper-color-rgb), 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    svg{
+        width: 3rem;
+        height: 3rem;
+        fill: var(--secondary-color);
+    }
+}
+
+
+
 .top-nav {
     display: flex;
     flex-direction: row;

@@ -169,26 +169,6 @@ h5.--colored {
   color: var(--main-color);
 }
 
-.top-scroll {
-  --size: 50px;
-  width: var(--size);
-  height: var(--size);
-  z-index: 1000;
-  position: fixed;
-  bottom: 2vh;
-  right: 2vw;
-  border-radius: 15px;
-  border: 2px var(--main-color) solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: var(--secondary-color);
-  background-color: rgba(var(--paper-color-rgb), 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
 .harmonic {
   display: flex;
   flex-direction: column;
@@ -356,17 +336,24 @@ h5.--colored {
   width: 100%;
   min-height: 400px;
 }
+.address__icon svg {
+  fill: var(--main-color);
+  width: 25px;
+  height: 25px;
+}
 
 .footer {
   position: relative;
   background-color: var(--paper-color);
 }
-.footer__copy, .footer .version {
+.footer__copy,
+.footer .version {
   font-size: calc(var(--p-font-size) - 0.7rem);
   opacity: 0.4;
 }
 @media only screen and (min-width: 768px) {
-  .footer__copy, .footer .version {
+  .footer__copy,
+  .footer .version {
     font-size: calc(var(--p-font-size) - 0.3rem);
   }
 }

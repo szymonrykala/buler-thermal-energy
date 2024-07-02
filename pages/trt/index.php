@@ -5,7 +5,7 @@
     <?php require_once("./components/header_links.html") ?>
     <title>BTE - Pomiary TRT</title>
 </head>
-<?php require_once("./components/google_tags.html") ?>
+<?php require_once("./components/google_tags.php") ?>
 
 <body>
     <?php require_once("./components/navigation.php") ?>

@@ -9,7 +9,9 @@ if ($_SERVER["REQUEST_URI"] === "/") {
 }
 ?>
 
-<a href="#" class="top-scroll material-symbols-outlined">arrow_upward_alt</a>
+<a href="#" class="top-scroll">
+    <?php require_once("components/icons/arrow_upward.svg"); ?>
+</a>
 
 <nav class="top-nav">
     <a class="top-nav__logo --cool-font --bald" href=<?php echo $home_link; ?>>
@@ -79,10 +81,10 @@ if ($_SERVER["REQUEST_URI"] === "/") {
     </ul>
 
     <div class="side-nav__icons">
-        <a href="tel:+48664435690" class="material-symbols-outlined">
+        <a href="tel:+48664435690">
             <?php require_once("components/icons/phone.svg") ?>
         </a>
-        <a href="mailto:biuro@bulerenergy.pl" class="material-symbols-outlined">
+        <a href="mailto:biuro@bulerenergy.pl">
             <?php require_once("components/icons/email.svg") ?>
         </a>
     </div>

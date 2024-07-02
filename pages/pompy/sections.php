@@ -7,20 +7,20 @@
             <div class="col-12">
                 <div class="card__container">
                     <a class="card" href="#powietrze-woda">
-                        <span class="material-symbols-outlined">
-                            heat_pump
+                        <span class="card__icon">
+                            <?php require_once("components/icons/heatpump.svg"); ?>
                         </span>
                         <h3 class="card__caption">Powietrze - woda</h3>
                     </a>
                     <a class="card" href="#gruntowa">
-                        <span class="material-symbols-outlined">
-                            heat_pump_balance
+                        <span class="card__icon">
+                            <?php require_once("components/icons/heatpump_balance.svg"); ?>
                         </span>
                         <h3 class="card__caption">Gruntowa</h3>
                     </a>
                     <a class="card" href="#bezposrednie-parowanie">
-                        <span class="material-symbols-outlined" id="direct-radiatmion-heatpump-icon">
-                            nest_true_radiant
+                        <span class="card__icon" id="direct-radiatmion-heatpump-icon">
+                            <?php require_once("components/icons/heatpump_radiant.svg"); ?>
                         </span>
                         <h3 class="card__caption">Bezpośrednie odparowanie</h3>
                     </a>

@@ -7,13 +7,13 @@
     <title>BTE - Pompy ciepła</title>
 </head>
 <script type="text/javascript" src="scripts/offer-form.js"></script>
-<?php require_once("./components/google_tags.html") ?>
+<?php require_once("./components/google_tags.php") ?>
 
 <body>
     <?php require_once("./components/navigation.php") ?>
 
     <main>
-        <?php require_once("./pages/pompy/sections.html") ?>
+        <?php require_once("./pages/pompy/sections.php") ?>
 
         <?php require_once("./pages/pompy/offer_form.php") ?>
     </main>
