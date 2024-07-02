@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once("./handlers/tools.php");
+require_once("./components/generators.php");
 
 $s = new Session("MAILING_SESSION");
 
