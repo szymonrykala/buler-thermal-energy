@@ -4,7 +4,10 @@
             <h1 class="col-12 h1 h1--bald">Pompy ciepła</h1>
         </div>
         <div class="row">
-            <div class="col-12">
+            <h2 class="col-12 h2 py-5 h2--center">
+                Oferuję szeroki wybór pomp ciepła, w tym:
+            </h2>
+            <div class="col-12 py-3">
                 <div class="card__container">
                     <a class="card" href="#powietrze-woda">
                         <span class="card__icon">
@@ -22,7 +25,7 @@
                         <span class="card__icon" id="direct-radiatmion-heatpump-icon">
                             <?php require_once("components/icons/heatpump_radiant.svg"); ?>
                         </span>
-                        <h3 class="card__caption">Bezpośrednie odparowanie</h3>
+                        <h3 class="card__caption">Bezpośrednie parowanie</h3>
                     </a>
                 </div>
             </div>

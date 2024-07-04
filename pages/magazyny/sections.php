@@ -1,3 +1,7 @@
+<?php
+require_once("components/specview.php");
+?>
+
 <section class="page">
     <div class="container">
 
@@ -6,8 +10,8 @@
         </div>
 
         <div class="row py-5">
-            <h2 class="col-12 h2 h2--upper h2--color h2-p-0 h2--bald">
-                Magazyn energii all-in-one z systemem e-smart
+            <h2 class="col-12 h2 h2--upper h2-p-0 h2--bald">
+                Magazyn energii <span class="--cool-font --colored --bald">all-in-one</span> z systemem <span class="--cool-font --colored --bald">e-smart</span>
             </h2>
             <p class="col-12 page__p --cool-font">
                 Możliwość składowania i rozbudowy za pomocą zintegrowanego inwertera <span class="--colored --bald"> od 7,7 kWh do 30,7
@@ -26,9 +30,9 @@
             </div>
 
             <div class="col-12 col-md-8 col-lg-9 col-xl-10">
-                <h3 class="h2">
+                <h2 class="h2">
                     Instalacja systemu magazynowania energii nigdy nie była łatwiejsza!
-                </h3>
+                </h2>
                 <p class="page__p">
                     Modułowa koncepcja Energy-Butler jest odpowiednia nie tylko dla domów
                     jednorodzinnych, ale może być również rozszerzona dla firm lub wielopiętrowych
@@ -100,5 +104,54 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+
+
+<section class="page">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-12">
+                <h2 class="h2 h2--upper h2--bald p-0">
+                    Dane techniczne jednofazowego systemu AIO ESS
+                </h2>
+                <h3 class="h3">Model jednofazowy z 2 do 5 modułami baterii</h3>
+            </div>
+
+            <div class="col-12">
+                <?php generate_spec_view(file_get_contents("pages/magazyny/hybrid-inverter-1.json"), "0"); ?>
+            </div>
+        </div>
+
+        <div class="w-100 py-5"></div>
+        <div class="w-100 py-5"></div>
+
+        <div class="row gy-4">
+            <div class="col-12">
+                <h2 class="h2 h2--upper h2--bald p-0">
+                    Dane techniczne podłączenia inverterowego
+                </h2>
+                <h3 class="h3">Dostępnych jest od 2 do 8 trójfazowych modułów baterii</h3>
+            </div>
+            <div class="col-12">
+                <?php generate_spec_view(file_get_contents("pages/magazyny/hybrid-inverter-2.json"), "1"); ?>
+            </div>
+        </div>
+
+        <div class="w-100 py-5"></div>
+        <div class="w-100 py-5"></div>
+
+        <div class="row gy-4">
+            <div class="col-12">
+                <h2 class="h2 h2--upper h2--bald p-0">
+                    Dane techniczne połączeń modułów baterii
+                </h2>
+            </div>
+            <div class="col-12">
+                <?php generate_spec_view(file_get_contents("pages/magazyny/battery-modules.json"), "2"); ?>
+            </div>
+        </div>
+
     </div>
 </section>

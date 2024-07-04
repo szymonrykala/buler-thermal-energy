@@ -22,7 +22,7 @@ function handleSideNav() {
         sideNav.removeEventListener("click", linkClickHandler)
     }
 
-    navOpenBtn.addEventListener("click", () => {
+    navOpenBtn?.addEventListener("click", () => {
         if (sideNav.classList.contains("side-nav--open")) {
             closeNav()
         } else {
@@ -89,7 +89,39 @@ function handleForm(formSelector, apiUrl) {
         }
     }
 
-    form.addEventListener("submit", handle);
+    form?.addEventListener("submit", handle);
+}
+
+
+function handleSpecsViewer(mainSpecSelector) {
+    const specWindow = document.querySelector(mainSpecSelector);
+
+    const display = specWindow?.querySelector(".spec__display");
+    const items = specWindow?.querySelectorAll(".spec__item > input");
+    const item_views = specWindow?.querySelectorAll(".spec__view");
+
+    console.debug(display, items, item_views);
+
+    function itemClickHandler(e) {
+        console.debug("item clicked", e, e.target.id);
+        const view = specWindow.querySelector(`.spec__view-${e.target.id}`);
+        display.innerHTML = view.innerHTML
+
+        selectView(view);
+    }
+
+    function selectView(selectedView) {
+        item_views.forEach(view => {
+            if (view == selectedView) {
+                view.classList.remove("d-none");
+            } else {
+                view.classList.add("d-none");
+            }
+        });
+    }
+
+    items.forEach(item => item.addEventListener("click", itemClickHandler));
+    (specWindow.querySelector(".spec__item--default > input") || items[0])?.click();
 }
 
 
@@ -97,10 +129,14 @@ function main() {
     console.debug("start")
     handleSideNav();
     handleHarmonica();
+    
+    handleSpecsViewer(".spec-0");
+    handleSpecsViewer(".spec-1");
+    handleSpecsViewer(".spec-2");
 
     handleForm("#contact-form", FORM_API_URL.concat("/contact-form.php"));
 
-    document.querySelector("button[type=submit]")?.addEventListener("click", (e)=>{
+    document.querySelector("button[type=submit]")?.addEventListener("click", (e) => {
         e.preventDefault();
         window.alert("Formularz nie zadziałał\nNapisz do mnie na biuro@bulerenergy.pl")
     })

@@ -1,23 +1,50 @@
-.spec {
+.spec__item {
+  --height: 60px;
   width: 100%;
-  display: flex;
-  flex-flow: row;
-  justify-content: stretch;
 }
-.spec__params {
-  width: 65%;
-}
-.spec__select-container {
-  width: 35%;
-}
-.spec__select-item {
+.spec__item > label {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
   width: 100%;
-  height: 80px;
-  border-bottom: 2px solid var(--main-color);
+  height: var(--height);
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 3px solid var(--main-color);
+  cursor: pointer;
+  transition: background-color 0.1s linear;
 }
-.spec__select-iteminput {
-  appearance: none;
+.spec__item > label svg {
+  fill: var(--main-color);
+  margin: auto;
+  width: 25px;
+  height: 25px;
 }
-.spec__select-iteminput:checked {
-  background-color: var(--paper-color);
+.spec__item > label span {
+  font-size: 1.7rem;
+  color: var(--main-font-color);
+}
+.spec__item > input {
+  display: none;
+}
+.spec__item > input:checked + label,
+.spec__item label:hover {
+  background-color: var(--main-color);
+}
+.spec__item > input:checked + label svg,
+.spec__item label:hover svg {
+  fill: var(--main-font-color);
+}
+.spec__param {
+  width: 100%;
+}
+.spec__param h4,
+.spec__param h3 {
+  font-size: calc(var(--p-font-size) - 0.3rem);
+  font-weight: normal;
+}
+.spec__param p {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: 600;
 }
