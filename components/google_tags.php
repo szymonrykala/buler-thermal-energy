@@ -1,5 +1,5 @@
 <?php
-if (!in_array($_SERVER["SERVER_NAME"], ["127.0.0.1", "localhost", "macbook-air.home"])) {
+if (in_array($_SERVER["SERVER_NAME"], ["127.0.0.1", "localhost", "macbook-air.home"])) {
     return "";
 }
 ?>

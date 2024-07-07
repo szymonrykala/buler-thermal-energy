@@ -100,6 +100,8 @@ function handleSpecsViewer(mainSpecSelector) {
     const items = specWindow?.querySelectorAll(".spec__item > input");
     const item_views = specWindow?.querySelectorAll(".spec__view");
 
+    if (!(display && items && item_views)) return;
+
     console.debug(display, items, item_views);
 
     function itemClickHandler(e) {
@@ -120,8 +122,8 @@ function handleSpecsViewer(mainSpecSelector) {
         });
     }
 
-    items.forEach(item => item.addEventListener("click", itemClickHandler));
-    (specWindow.querySelector(".spec__item--default > input") || items[0])?.click();
+    items?.forEach(item => item.addEventListener("click", itemClickHandler));
+    (specWindow?.querySelector(".spec__item--default > input") || items.shift())?.click();
 }
 
 
@@ -135,11 +137,6 @@ function main() {
     handleSpecsViewer(".spec-2");
 
     handleForm("#contact-form", FORM_API_URL.concat("/contact-form.php"));
-
-    document.querySelector("button[type=submit]")?.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.alert("Formularz nie zadziałał\nNapisz do mnie na biuro@bulerenergy.pl")
-    })
 }
 
 window.addEventListener("load", main);

@@ -21,6 +21,11 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 //Create an instance; passing `true` enables exceptions
+
+if (!$request->is_authenticated()) {
+    (new Response(400, "Formularz nie został poprawnie zautoryzowany"))->send();
+}
+
 $mail = new PHPMailer(true);
 
 try {
@@ -37,25 +42,24 @@ try {
 
     //Recipients
     $mail->setFrom($USER, $body["firstName"] . ' ' . $body["lastName"]);
-    $mail->addAddress('szymonrykala@gmail.com', 'Szymon Rykała');     //
+
+    $mail->addAddress('szymonrykala@gmail.com', 'Szymon Rykała');
+    $mail->addAddress('biuro@bulerenergy.pl', 'Piotr Buler');
+
     $mail->smtpConnect();
 
     //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->isHTML(true);
+    $mail->Subject = $body["subject"];
+
+    $message = "Wiadomość od: " . $body['email'] . "\n\n" . $body["message"] . "\nmiasto: " . $body["city"] . "\n";
+    $mail->Body = $message;
+
+
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-    // print_r($body);
     $mail->send();
-    echo 'Message has been sent';
+
+    (new Response(200, "Email został wysłany!"))->send();
 } catch (Exception $e) {
-    print_r($mail->ErrorInfo);
+    (new Response(500, "Formularz nie zadziałał\nNapisz do mnie na biuro@bulerenergy.pl"))->send();
 }
-
-
-// if ($request->is_authenticated()) {
-//     (new Response(200, "Email został wysłany!"))->send();
-// } else {
-//     (new Response(400, "Formularz nie został poprawnie zautoryzowany"))->send();
-// }
