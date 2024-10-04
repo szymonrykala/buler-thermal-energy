@@ -1,0 +1,37 @@
+:root{
+    --main-color: rgb(var(--main-color-rgb));
+    --secondary-color: rgb(var(--secondary-color-rgb));
+    --paper-color: rgb(var(--paper-color-rgb), 1);
+    --background-color: rgba(var(--background-color-rgb), 1);
+
+    --header-font-color: rgba(var(--header-font-color-rgb), 1);
+    --main-font-color: rgba(var(--main-font-color-rgb), 1);
+
+}
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200;
+$bp-xxl: 1400px; 
+
+
+:root,
+[data-color-theme=dark] {
+    --main-color-rgb: 230, 125, 80;
+    --secondary-color-rgb: 133, 124, 206;
+    --paper-color-rgb: 30, 30, 30;
+    --background-color-rgb: 15, 15, 15;
+
+    --main-font-color-rgb: 240, 240, 240;
+    --header-font-color-rgb: 240, 240, 240;
+}
+
+[data-color-theme=light] {
+    --main-color-rgb: 230, 125, 80;
+    --secondary-color-rgb: 133, 124, 206;
+    --background-color-rgb: 240, 240, 240;
+    --paper-color-rgb: 220, 220, 220;
+
+    --main-font-color-rgb: 15, 15, 15;
+    --header-font-color-rgb: 15, 15, 15;
+}
