@@ -1,0 +1,106 @@
+@keyframes logo-enter {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotateZ(230deg);
+        -webkit-transform: scale(0.5) rotateZ(230deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotateZ(0deg);
+        -webkit-transform: scale(1) rotateZ(0deg);
+    }
+}
+
+
+@keyframes slide-from-down {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+        -webkit-transform: translateY(50px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@keyframes rotate-360 {
+    0% {
+        transform: rotateZ(0deg) scale(0.9);
+        -webkit-transform: rotateZ(0deg) scale(0.9);
+    }
+
+    50% {
+        transform: rotateZ(-180deg) scale(1.1);
+        -webkit-transform: rotateZ(-180deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotateZ(-360deg) scale(0.9);
+        -webkit-transform: rotateZ(-360deg) scale(0.9);
+    }
+}
+
+@keyframes from-bottom {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.slide-up-animation{
+    opacity:0;
+    --delay: 0.2s;
+    animation: slide-from-down 0.8s ease var(--delay) 1 forwards;
+    -webkit-animation: slide-from-down 0.8s ease var(--delay) 1 forwards;
+}
+
+.on-show-animation {
+    opacity: 0;
+    transform: translateX(-80px);
+
+    &.slide-up {
+        --delay: 0.1s;
+        animation: slide-from-down 0.5s ease var(--delay) 1 forwards;
+        -webkit-animation: slide-from-down 0.5s ease var(--delay) 1 forwards;
+
+        &--d1 {
+            --delay: calc(var(--delay) + 0.1);
+        }
+
+        &--d2 {
+            --delay: calc(var(--delay) + 0.2);
+        }
+
+        &--d3 {
+            --delay: calc(var(--delay) + 0.3);
+        }
+    }
+
+}
+
+.slow-constant-rotate {
+    --duration: 50s;
+    --offset: 0s;
+
+    animation: rotate-360 var(--duration) ease-in var(--offset) infinite;
+    -webkit-animation: rotate-360 var(--duration) ease-in var(--offset) infinite;
+
+    &--long {
+        --duration: 250s;
+    }
+
+    &--offset-1 {
+        --offset: 1s;
+    }
+}
