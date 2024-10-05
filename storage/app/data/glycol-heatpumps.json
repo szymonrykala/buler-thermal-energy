@@ -1,0 +1,30 @@
+[
+    {
+        "name": "M-TEC WPS",
+        "description": "krutki opis, to co ma być na kafelku",
+        "image": "m-tec-wps.webp",
+        "details": "https://www.lg.com/content/dam/channel/wcms/pl/business/download/resources/ct40013991/Therma-V-Split_20220721_135105_.pdf",
+        "bulletpoints": [
+            "Elastyczna instalacja",
+            "Ogrzewanie, chłodzenie i zaopatrzenie w ciepłą wodę użytkową",
+            "Klasa energetyczna A+++ (średnia temp. wody na wylocie 35℃)",
+            "Temperatura wody wypływającej do 65 ℃ dla R32 / 57 ℃ dla R410A / 80 ℃ dla modelu wysoko temperaturowego",
+            "Działa w temperaturze zewnętrznej nawet tak niskiej jak -25 ℃",
+            "Jednostka zewnętrzna łączy się z jednostką wewnętrzną przewodami czynnika chłodniczego"
+        ]
+    },
+    {
+        "name": "M-TEC WPS",
+        "description": "krutki opis, to co ma być na kafelku",
+        "image": "m-tec-wps-4-12.webp",
+        "details": "https://www.lg.com/content/dam/channel/wcms/pl/business/download/resources/ct40013991/Therma-V-Split_20220721_135105_.pdf",
+        "bulletpoints": [
+            "Elastyczna instalacja",
+            "Ogrzewanie, chłodzenie i zaopatrzenie w ciepłą wodę użytkową",
+            "Klasa energetyczna A+++ (średnia temp. wody na wylocie 35℃)",
+            "Temperatura wody wypływającej do 65 ℃ dla R32 / 57 ℃ dla R410A / 80 ℃ dla modelu wysoko temperaturowego",
+            "Działa w temperaturze zewnętrznej nawet tak niskiej jak -25 ℃",
+            "Jednostka zewnętrzna łączy się z jednostką wewnętrzną przewodami czynnika chłodniczego"
+        ]
+    }
+]

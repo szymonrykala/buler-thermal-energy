@@ -1,0 +1,131 @@
+[
+    {
+        "title": "Inverter hybrydowy 3kW - 1F - 3G3O",
+        "button": "3kW - 1F - 3G30",
+        "default": true,
+        "params": [
+            {
+                "label": "Wymiary (W x D x H) mm",
+                "value": "698 x 356 x 613"
+            },
+            {
+                "label": "Waga kg",
+                "value": "53"
+            },
+            {
+                "label": "Max. użyteczna moc wejściowa DC",
+                "value": "3 kWp"
+            },
+            {
+                "label": "Max. Moc wyjściowa AC",
+                "value": "3,3 kW"
+            },
+            {
+                "label": "Zakres napięcia MPPT",
+                "value": "50 - 550 V"
+            },
+            {
+                "label": "Tracker MPP / String na MPPT",
+                "value": "1/1"
+            },
+            {
+                "label": "Prąd znamionowy na MPPT",
+                "value": "15 A"
+            },
+            {
+                "label": "Max. Prąd ładowania i rozładowywania DC",
+                "value": "20 A"
+            },
+            {
+                "label": "MAKS. Ładowanie i rozładowywanie prądu DC",
+                "value": "3,0 kW"
+            }
+        ]
+    },
+    {
+        "title": "Inverter hybrydowy 4.2kW - 1F - 3G30",
+        "button": "4.2kW - 1F - 3G30",
+        "default": false,
+        "params": [
+            {
+                "label": "Wymiary (W x D x H) mm",
+                "value": "698 x 356 x 613"
+            },
+            {
+                "label": "Waga kg",
+                "value": "55"
+            },
+            {
+                "label": "Max. użyteczna moc wejściowa DC",
+                "value": "4,2 kWp"
+            },
+            {
+                "label": "Max. Moc wyjściowa AC",
+                "value": "4,6 kW"
+            },
+            {
+                "label": "Zakres napięcia MPPT",
+                "value": "50 - 550 V"
+            },
+            {
+                "label": "Tracker MPP / String na MPPT",
+                "value": "2/1"
+            },
+            {
+                "label": "Prąd znamionowy na MPPT",
+                "value": "15 A"
+            },
+            {
+                "label": "Max. Prąd ładowania i rozładowywania DC",
+                "value": "20 A"
+            },
+            {
+                "label": "MAKS. Ładowanie i rozładowywanie DC",
+                "value": "4,6 kW"
+            }
+        ]
+    },
+    {
+        "title": "Inverter hybrydowy 6kW - 1F - 3G30",
+        "button": "6kW - 1F - 3G30",
+        "default": false,
+        "params": [
+            {
+                "label": "Wymiary (W x D x H) mm",
+                "value": "698 x 356 x 613"
+            },
+            {
+                "label": "Waga kg",
+                "value": "55"
+            },
+            {
+                "label": "Max. użyteczna moc wejściowa DC",
+                "value": "6 kWp"
+            },
+            {
+                "label": "Max. Moc wyjściowa AC",
+                "value": "6,6 kW"
+            },
+            {
+                "label": "Zakres napięcia MPPT",
+                "value": "50 - 550 V"
+            },
+            {
+                "label": "Tracker MPP / String na MPPT",
+                "value": "2/1"
+            },
+            {
+                "label": "Prąd znamionowy na MPPT",
+                "value": "15 A"
+            },
+            {
+                "label": "Max. Prąd ładowania i rozładowywania DC",
+                "value": "20 A"
+            },
+            {
+                "label": "MAKS. Ładowanie i rozładowywanie DC",
+                "value": "6,0 kW"
+            }
+        ]
+    }
+]

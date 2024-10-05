@@ -24,10 +24,10 @@
         }
     </script>
 
-    <x-sections.hero img="{{ asset('images/room-and-m-tec-logo.png') }}">
+    <x-sections.hero dim="1" img="{{ asset('images/energy-butler.jpg') }}">
         <h1 class="--bald">
-            Magazyn energii <span class="--cool-font --colored --bald">all-in-one</span> z systemem <span
-                class="--cool-font --colored --bald">e-smart</span>
+            Magazyn energii <span class="--cool-font --colored --bald">all-in-one</span><br>
+            <small>z systemem <span class="--cool-font --colored --bald">e-smart</span></small>
         </h1>
         <p>
             Możliwość składowania i rozbudowy za pomocą zintegrowanego inwertera <span class="--colored --bald"> od

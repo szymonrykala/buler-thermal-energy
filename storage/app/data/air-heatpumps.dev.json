@@ -1,0 +1,64 @@
+[
+    {
+        "name": "M-TEC Hydrosplit",
+        "description": "krutki opis, to co ma być na kafelku",
+        "image": "m-tec-hydrosplit.png",
+        "details": "https://www.lg.com/content/dam/channel/wcms/pl/business/download/resources/ct40013991/Therma-V-Split_20220721_135105_.pdf",
+        "bulletpoints": [
+            "Elastyczna instalacja",
+            "Ogrzewanie, chłodzenie i zaopatrzenie w ciepłą wodę użytkową",
+            "Klasa energetyczna A+++ (średnia temp. wody na wylocie 35℃)",
+            "Temperatura wody wypływającej do 65 ℃ dla R32 / 57 ℃ dla R410A / 80 ℃ dla modelu wysoko temperaturowego",
+            "Działa w temperaturze zewnętrznej nawet tak niskiej jak -25 ℃",
+            "Jednostka zewnętrzna łączy się z jednostką wewnętrzną przewodami czynnika chłodniczego"
+        ]
+    },
+    {
+        "name": "LG Therma V typu SPLIT",
+        "description": "Seria LG THerma V Split to pompy ciepła typu powietrze-woda. Modele 4/6KW są idealne do nowobudownych domów, które są dobrze ocieplone i wymagają małego obciążenia cieplnego. Modele 5/7/9KW są przystosowane do nowych projektów domów, jak i już do istniejących budynków.",
+        "image": "therma-v.png",
+        "bulletpoints": [
+            "Dostępne moce 4/5/6/7/9KW ",
+            "Wysoka efektywność energetyczna (SCOP 4,65/A+++)",
+            "Klasa energetyczna A+++ (średnia temp. wody na wylocie +35℃)",
+            "Doskonała wydajność, pełna moc nominalna do temp. -7℃ i ok. 90% mocy nominalnej przy temp.-15℃ bez udziału grzałek",
+            "Temperatura wody na zasilaniu do +65 ℃ ",
+            "Czynnik chłodniczy R32 o wysokiej wydajności",
+            "Poprawna praca przy temperaturze -25 ℃",
+            "Certyfikacja KEYMARK / MCS / EHPA / Eurowent",
+			"5 lat pełnej gwarancji, sieć Autoryzowanych Serwisów w całej Polsce"
+        ]
+    },
+    {
+        "name": "LG Therma V typu HYDROSPLIT",
+        "description": "Mając na uwadze innowacje i bezpieczeństwo, LG Therma V Hydrosplit rozdziela jednostkę wewnętrzną i jednostkę zewnętrzną, łącząc je tylko rurami wodnymi. Wymiennik ciepła znajduje się w jednostce zewnętrznej, co zmniejsza ryzyko wycieku czynnikachłodniczego w pomieszczeniu.",
+        "image": "lg-hydrobox.webp",
+        "bulletpoints": [
+            "Dostępne moce 12/14/16KW ",
+            "Wysoka efektywność energetyczna SCOP do 4,65 (klimat umiarkowany/zastosowanie niskotemp.)",
+            "Klasa energetyczna A+++ (średnia temp. wody na wylocie +35℃)",
+            "Doskonała wydajność, pełna moc nominalna do temp. -7℃ i ok. 90% mocy nominalnej przy temp.-15℃ bez udziału grzałek",
+            "Temperatura wody na zasilaniu do +65 ℃ ",
+            "Czynnik chłodniczy R32 o wysokiej wydajności",
+            "Poprawna praca przy temperaturze -25 ℃",
+            "Certyfikacja KEYMARK / MCS / Eurowent",
+			"5 lat pełnej gwarancji, sieć Autoryzowanych Serwisów w całej Polsce"
+        ]
+    },
+	{
+        "name": "LG Therma V typu MONOBLOC S",
+        "description": "Pompa ciepła Therma V Monobloc S jest drugą generacją Monobloców LG na czynnik R32. Jak sugerują słowa \"silence\" oraz \"supreme\" Monobloc S charakteryzuje się niskim poziomem hałasu oraz najlepszą wydajnością w serii Therma V. Połączenie jednostki wewnętrznej i zewnętrznej w jedno urządzenie, umożliwia podłączenie z instalacją wewnętrzną jedynie rurami wodnymi, eliminując potrzebę instalacji rur chłodniczych. Ponadto wewnątrz jednostki są umieszczone elementy hydrauliczne, takie jak płytowy wymiennik ciepła, zbiornik wyrównawczy, pompa wody, czujnik przepływu, czujnik ciśnienia, zawór odpowietrzający i zawór bezpieczeństwa.",
+        "image": "lg-monoblok.png",
+        "bulletpoints": [
+            "Dostępne moce 5/7/9/12/14/16KW ",
+            "Wysoka efektywność energetyczna SCOP do 4,67 (Klimat umiarkowany/Zastosowanie niskotemperaturowe)",
+            "Klasa energetyczna A+++ (średnia temp. wody na wylocie +35℃)",
+            "100% wydajności w trybie grzania przy temperaturze zewnętrznej -15°C (średnia temp. wody na wyjściu 35°C , z wyjątkiem modelu o mocy 16kW)",
+            "Temperatura wody na zasilaniu do +65 ℃ ",
+            "Czynnik chłodniczy R32 o wysokiej wydajności",
+            "Poprawna praca przy temperaturze -25 ℃",
+            "Certyfikacja KEYMARK / MCS / Eurowent",
+			"5 lat pełnej gwarancji, sieć Autoryzowanych Serwisów w całej Polsce"
+        ]
+    }
+]

@@ -16,23 +16,32 @@
     <section class="container">
         <div class="row py-5 gy-5 text-center">
             <h2 class="col-12">Zasada działania</h2>
-            <div class="col-lg px-5">
+            <div class="col-lg">
                 <span class="number-icon">1</span>
                 <p>
-                    W gruntowych pompach ciepła z glikolem, czynnik roboczy (glikol) krąży w dolnym źródle
-                    i transportuje ciepło z gruntu do pompy. Następnie, w obiegu pompy ciepła, czynnik chłodniczy
-                    przechodzi z fazy ciekłej do gazowej w parowniku, co umożliwia odzyskanie ciepła z gruntu.
+                    Pompa ciepła bezpośredniego parowania pobiera ciepło z gruntu bezpośrednio przez wymiennik, w którym
+                    krąży czynnik roboczy (np. gaz). Następnie sprężarka podnosi jego temperaturę, a ciepło jest
+                    przekazywane do systemu grzewczego budynku.
                 </p>
             </div>
-            <div class="col-lg px-lg-5">
+            <div class="col-lg px-5 pt-md-5">
                 <span class="number-icon">2</span>
                 <p>
-                    Po zwiększeniu ciśnienia i temperatury czynnika przez sprężarkę, trafia on do skraplacza, gdzie
-                    oddaje ciepło do systemu grzewczego, takiego jak ogrzewanie podłogowe, ścienne czy grzejnikowe.
-                    System działa najefektywniej w połączeniu z instalacjami niskotemperaturowymi, szczególnie
-                    ogrzewaniem podłogowym.
+                    Pompy ciepła bezpośredniego parowania są o 20% bardziej wydajne od pomp glikolowych. W sprzyjających
+                    warunkach mogą osiągać współczynnik wydajności COP nawet 6,7, co oznacza, że każda jednostka zużytej
+                    energii elektrycznej daje do 6,7 jednostki energii cieplnej.
                 </p>
             </div>
+            <div class="col-lg px-5">
+                <span class="number-icon">3</span>
+                <p>
+                    Dzięki eliminacji pośredniego czynnika (solanki) uzyskuje się
+                    większą wydajność w porównaniu do systemów glikolowych, niskie koszty eksploatacji, ekologiczność
+                    oraz stabilna praca dzięki bezpośredniemu kontaktowi z gruntem bez potrzeby stosowania pośrednich
+                    cieczy (glikolu).
+                </p>
+            </div>
+
             <div class="col-12 col-md-10 col-lg-8 m-auto">
                 <span class="number-icon">👍</span>
                 <p>
@@ -45,10 +54,11 @@
 
     <section class="container-fluid position-relative py-5">
         <div class="row p-3">
-            <img class="img-fluid img cover vh6" src="{{ asset('images/lady-with-a-pot.png') }}"
+            <img class="img-fluid img cover vh6" src="{{ asset('images/kolektor.jpg') }}"
                 alt="pompa ciepła powietrze-woda">
 
             <div class="w-100 py-5 my-5"></div>
+            <div class="w-100 my-5"></div>
 
             <div class="col offset-md-1 col-md-8 col-lg-7 col-xl-6 p-3 p-md-4 bg-secondary blur-2 round-3">
                 <h2>Jakie ma zalety?</h2>
@@ -71,6 +81,21 @@
                         oszczędności.</li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row text-center">
+            <h2 class="col-12">Proponowane pompy ciepła</h2>
+            <p class="col-12 col-lg-8 offset-lg-2">Oferujemy tylko sprawdzone i niezawodne urządzenia.
+                Odpowiednio dobrany model to kluczowa decyzja. Skontaktuj się z nami a podejmiemy ją razem.</p>
+        </div>
+        <div class="row gy-2 p-2">
+
+            @foreach ($products as $product)
+                <x-heatpump-product :product="$product" />
+            @endforeach
+
         </div>
     </section>
 
