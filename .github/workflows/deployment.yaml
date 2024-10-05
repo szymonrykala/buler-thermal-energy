@@ -5,7 +5,7 @@ on:
     inputs:
       environment:
         type: choice
-        description: Env to deploy to
+        description: Target env
         options: 
         - production
         - dev
