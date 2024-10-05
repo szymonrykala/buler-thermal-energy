@@ -52,6 +52,7 @@
         </div>
     </section>
 
+    @env('local')
     <section class="container vh-5">
         <div class="row py-5">
             <img class="col-12 col-lg-6" src="{{ asset('images/soil-plant-hand.jpg') }}" />
@@ -68,6 +69,7 @@
             </div>
         </div>
     </section>
+    @endenv
 
     <x-business-partners business="heatpumps" />
 

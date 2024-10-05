@@ -1,0 +1,57 @@
+name: Website deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: Target env
+        options: 
+        - production
+        - dev
+      version:
+        required: true
+
+jobs:
+  laravel-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
+      with:
+        php-version: '8.3.12'
+    - uses: actions/checkout@v4
+    # - name: Copy .env
+    #   run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+    - name: Install PHP Dependencies
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist && npm
+
+    - name: Install Node Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build && php artisan:optimize
+
+    - name: Generate key
+      run: php artisan key:generate
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: serwer2494047.home.pl
+        username: ${{secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: public_html/bulerenergy/
+        local-dir: ./
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          resources/css/**
+          resources/js/**
+          tests
+          .editorconfig
+          artisan
+          ./*.json
+          ./*.xml
+          ./*.js

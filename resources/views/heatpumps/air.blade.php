@@ -5,7 +5,7 @@
     url="https://bulerenergy.pl">
 
 
-    <x-sections.hero img="{{ asset('/images/hydrosplit-hydro-box.png') }}">
+    <x-sections.hero img="{{ asset('/images/monter-and-a-lady.jpg') }}">
         <h1 class="--bald">Pompy Ciepła Powietrze-Woda</h1>
         <p>Ekologiczne i energooszczędne rozwiązania dla Twojego domu</p>
         <a role="button" href="#formularz-ofertowy" class="custom-btn custom-btn--contained center-block">formularz

@@ -18,7 +18,7 @@ Route::controller(MainController::class)->group(function () {
             Route::get('/', fn()=>view("heatpumps.main-ground"))->name("heatpumps.ground.main");
             Route::get('/glikol', "glycolHeatpumps")->name("heatpumps.ground.glycol");
             Route::get('/woda-woda', "waterHeatpumps")->name("heatpumps.ground.water");
-            Route::get('/bezposrednie-parowanie', fn()=>view("heatpumps.direct-evaporation"))->name("heatpumps.ground.direct-evaporation");
+            Route::get('/bezposrednie-parowanie', "directEvaporationHeatpumps")->name("heatpumps.ground.direct-evaporation");
         });
     });
 

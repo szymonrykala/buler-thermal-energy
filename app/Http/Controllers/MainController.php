@@ -36,6 +36,13 @@ final class MainController extends Controller
         ]);
     }
 
+    public function directEvaporationHeatpumps(): View
+    {
+        return view("heatpumps.direct-evaporation", [
+            "products" => HeatpumpProduct::fromFile("data/direct-evaporation-heatpumps.json")
+        ]);
+    }
+
     public function waterHeatpumps(): View
     {
         return view("heatpumps.water");
