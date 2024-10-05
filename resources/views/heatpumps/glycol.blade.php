@@ -74,7 +74,6 @@
         </div>
     </section>
 
-    @env(['local'])
     <section class="container py-5">
         <div class="row text-center">
             <h2 class="col-12">Proponowane pompy ciepła</h2>
@@ -89,7 +88,6 @@
 
         </div>
     </section>
-    @endenv
 
     @include('heatpumps.offer-form')
 </x-layout>

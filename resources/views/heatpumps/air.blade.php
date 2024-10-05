@@ -13,13 +13,6 @@
     </x-sections.hero>
 
 
-    {{-- <section class="container py-5 bg-main">
-        <h1 class="--bald">Pompy Ciepła Powietrze-Woda</h1>
-        <p>Ekologiczne i energooszczędne rozwiązania dla Twojego domu</p>
-        <a role="button" href="#formularz-ofertowy" class="custom-btn custom-btn--contained center-block">formularz
-            ofertowy</a> 
-    </section> --}}
-
     <section class="container">
         <div class="row py-5 gy-3 text-center">
             <h2 class="col-12">Zasada działania</h2>
@@ -55,13 +48,13 @@
 
     <section class="container-fluid position-relative w-100 py-5">
         <div class="row p-3">
-            <img class="img-fluid img cover vh6 w-100" src="{{ asset('images/couple-in-grass.png') }}"
+            <img class="img-fluid img cover vh6 w-100" src="{{ asset('images/lady-with-a-dog.jpg') }}"
                 alt="happy buyers of heatpump">
 
             <div class="w-100 py-4 my-5 py-md-5 my-md-5"></div>
             <div class="w-100 my-4 my-md-5"></div>
 
-            <div class="col offset-md-1 col-md-8 col-lg-7 col-xl-6 p-3 p-md-4 bg-secondary blur-2 round-3">
+            <div class="col offset-md-1 col-md-8 col-lg-7 col-xl-6 p-3 p-md-4 bg-secondary blur-2 round-3 on-show-animation">
                 <h2>Jakie ma zalety?</h2>
                 <ul>
                     <li> <b>Oszczędność energii</b>:<br> Wykorzystują darmową energię z powietrza, znacznie
@@ -79,7 +72,6 @@
         </div>
     </section>
 
-    @env(['local'])
     <section class="container py-5">
         <div class="row text-center">
             <h2 class="col-12">Proponowane pompy ciepła</h2>
@@ -94,7 +86,6 @@
 
         </div>
     </section>
-    @endenv
 
     @include('heatpumps.offer-form')
 </x-layout>

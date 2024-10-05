@@ -18,7 +18,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <ul>
+                <ul class="space-l">
                     <li>
                         Sonda wykorzystana do pomiaru efektywnej przewodności cieplnej ( pojedyncze U,
                         podwójne U lub sonda koaksjalna) musi być po próbach ciśnieniowych i próbach

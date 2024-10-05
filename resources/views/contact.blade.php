@@ -2,7 +2,7 @@
     url="https://bulerenergy.pl">
 
 
-    <section class="container mt-5 py-7">
+    <section class="container mt-5 py-5">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-lg-6">
                 <img class="center-block img img-h40 p-3" src="{{ asset('images/piotr_buler.png') }}" />

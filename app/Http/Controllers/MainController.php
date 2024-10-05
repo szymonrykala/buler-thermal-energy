@@ -32,7 +32,7 @@ final class MainController extends Controller
     public function glycolHeatpumps(): View
     {
         return view("heatpumps.glycol", [
-            "products" => HeatpumpProduct::fromFile("data/air-heatpumps.json")
+            "products" => HeatpumpProduct::fromFile("data/glycol-heatpumps.json")
         ]);
     }
 

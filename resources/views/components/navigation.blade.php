@@ -1,4 +1,4 @@
-<header class="navbar container-fluid blur-4">
+<header class="navbar container-fluid blur-3">
     <div class="container">
         <div class="row align-items-center py-3 justify-content-between">
 

@@ -11,7 +11,7 @@
     <div class="row mt-5 justify-content-center gy-3">
 
         @foreach ($partners as $partner)
-            <div class="col-12 col-md">
+            <div class="col-12 col-md" id="{{ $partner->name }}">
                 <section class="hovercard {{ $loop->count === 1 ? 'hovercard--side-open' : '' }}">
                     <img class="hovercard__img hovercard__img--contain p-5" src="{{ asset('images/' . $partner->logo) }}"
                         alt="logo {{ $partner->name }}">

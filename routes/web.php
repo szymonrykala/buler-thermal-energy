@@ -24,6 +24,7 @@ Route::controller(MainController::class)->group(function () {
 
     Route::get('/magazyny-energii', "batteries")->name("batteries");
     Route::get('/pomiary-trt', fn() => view("trt-measurements"))->name("trt-measurements");
+    Route::get('/fotowoltaika', fn() => view("fotovoltaic"))->name("fotovoltaic");
     Route::get('/w-realizacji', "inProgress")->name("in-progress");
 });
 
