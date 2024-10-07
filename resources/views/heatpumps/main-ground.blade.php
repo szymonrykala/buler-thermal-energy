@@ -71,7 +71,7 @@
     </section>
     @endenv
 
-    <x-business-partners business="heatpumps" />
+    <x-business-partners business="ground-heatpumps" />
 
     </section>
 

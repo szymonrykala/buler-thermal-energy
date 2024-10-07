@@ -11,8 +11,9 @@
                 7,7 kWh do 30,7 kWh
             </span>.
         </p>
-        <a role="button" href="" class="custom-btn custom-btn--contained center-block">formularz
-            ofertowy</a>
+        <a role="button" href="{{ route('contact') }}" class="custom-btn custom-btn--contained center-block">
+            Skontaktuj się
+        </a>
     </x-sections.hero>
 
 </x-layout>

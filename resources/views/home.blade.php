@@ -37,7 +37,7 @@
                     [
                         'title' => 'Fotowoltaika',
                         'icon' => 'icons.fw-panel',
-                        'link' => route('in-progress'),
+                        'link' => route('fotovoltaic'),
                     ],
                     [
                         'title' => 'Magazyny energii',
@@ -50,9 +50,9 @@
                         'link' => route('trt-measurements'),
                     ],
                     [
-                        'title' => 'Audyty budynków',
+                        'title' => 'Świadectwo energetyczna',
                         'icon' => 'icons.building',
-                        'link' => route('in-progress'),
+                        'link' => route('energetic-passport'),
                     ],
                 ];
             @endphp
