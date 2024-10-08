@@ -1,0 +1,39 @@
+{
+    "business": [
+        "heatpumps",
+        "ground-heatpumps",
+        "batteries"
+    ],
+    "partners": [
+        {
+            "name": "M-TEC Systems",
+            "logo": "m-tec-logo.jpg",
+            "link": "https://www.mtec-systems.pl",
+            "businesses": [
+                "heatpumps",
+                "batteries",
+                "ground-heatpumps"
+            ],
+            "description": "M-TEC International to austriacka firma Green-Tech, specjalizująca się w innowacyjnych rozwiązaniach energetycznych. Firma koncentruje się na inteligentnych technologiach sterowania oraz zrównoważonym zarządzaniu energią, oferując pompy ciepła, systemy fotowoltaiczne, magazyny energii oraz rozwiązania dla e-mobilności."
+        },
+        {
+            "name": "iDM Energysystems",
+            "logo": "idm-logo.jpg",
+            "link": "https://www.idm-energie.at/en/",
+            "businesses": [
+                "heatpumps",
+                "ground-heatpumps"
+            ],
+            "description": "iDM to największy austriacki producent pomp ciepła, z ponad 45-letnim doświadczeniem w odnawialnych źródłach energii. Tworzy innowacyjne pompy ciepła o mocy do 1500 kW, wyznaczając standardy jakości i technologii. Jako rodzinne przedsiębiorstwo, iDM dba o zrównoważoną przyszłość, oferując nowoczesne rozwiązania energetyczne."
+        },
+        {
+            "name": "LG",
+            "logo": "logo-lg.svg",
+            "link": "https://www.lg.com/pl/business/systemy-grzewcze-pompy-ciepla/",
+            "businesses": [
+                "heatpumps"
+            ],
+            "description": "LG to globalny lider w produkcji pomp ciepła, oferujący nowoczesne i energooszczędne systemy grzewcze i chłodzące. Firma stawia na zaawansowaną technologię inwerterową oraz trwałość dzięki powłoce Gold Fin, zapewniając efektywność nawet w niskich temperaturach."
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+[
+    {
+        "name": "M-TEC WPS 412",
+        "description": "Gruntowa pompa ciepła wyższej wydajności. Opracowana przez pioniera pomp ciepła M-TEC z ponad 35-letnim doświadczeniem. Energia geotermalna dla pokoleń. Dzięki przetestowanej rocznej wydajności 6,0, gruntowa pompa ciepła jest jedną z najlepszych w swojej klasie. Inteligentna kontrola mocy. Zintegrowany systeme zarządzania energią. Nowa technologia wtrysku. Proaktywna reakcja na przyszłe zmiany prędkości maksymalizuje wydajność pompy ciepła. Inwerter dostosowuje zużytą energię do rzeczywistego zapotrzebowania. Wydłuża to żywotność sprężarki poprzez znaczne zmniejszenie liczby cykli włączania.",
+        "image": "m-tec-wps.png",
+        "details": "https://www.lg.com/content/dam/channel/wcms/pl/business/download/resources/ct40013991/Therma-V-Split_20220721_135105_.pdf",
+        "bulletpoints": [
+            "Moc grzewcza  3-11KW, moc grzewcza 10,64KW, 1F/3F ",
+            "Klasa energetyczna 35℃/55℃ A+++/A+++",
+            "Temperatura wody wypływającej do 62 ℃",
+            "Spawność COP B0/W35 5K (przy obciążeniu 100%), 4,42",
+            "SCOP 35℃ 5,29, SCOP 55℃ 3,96 "
+        ]
+    },
+    {
+        "name": "M-TEC WPS 618",
+        "description": "Gruntowa pompa ciepła wyższej wydajności. Opracowana przez pioniera pomp ciepła M-TEC z ponad 35-letnim doświadczeniem. Energia geotermalna dla pokoleń. Dzięki przetestowanej rocznej wydajności 6,0, gruntowa pompa ciepła jest jedną z najlepszych w swojej klasie. Inteligentna kontrola mocy. Zintegrowany systeme zarządzania energią. Nowa technologia wtrysku. Proaktywna reakcja na przyszłe zmiany prędkości maksymalizuje wydajność pompy ciepła. Inwerter dostosowuje zużytą energię do rzeczywistego zapotrzebowania. Wydłuża to żywotność sprężarki poprzez znaczne zmniejszenie liczby cykli włączania.",
+        "image": "m-tec-wps.png",
+        "details": "https://www.lg.com/content/dam/channel/wcms/pl/business/download/resources/ct40013991/Therma-V-Split_20220721_135105_.pdf",
+        "bulletpoints": [
+            "Moc grzewcza  4-16KW, moc grzewcza 15,76KW, 1F/3F ",
+            "Klasa energetyczna 35℃/55℃ A+++/A+++",
+            "Temperatura wody wypływającej do 62 ℃",
+            "Spawność COP B0/W35 5K (przy obciążeniu 100%) 4,36",
+            "SCOP 35℃ 5,51, SCOP 55℃ 4,28 "
+        ]
+    },
+    {
+        "name": "M-TEC WPS 1036",
+        "description": "Gruntowa pompa ciepła wyższej wydajności. Opracowana przez pioniera pomp ciepła M-TEC z ponad 35-letnim doświadczeniem. Energia geotermalna dla pokoleń. Dzięki przetestowanej rocznej wydajności 6,0, gruntowa pompa ciepła jest jedną z najlepszych w swojej klasie. Inteligentna kontrola mocy. Zintegrowany systeme zarządzania energią. Nowa technologia wtrysku. Proaktywna reakcja na przyszłe zmiany prędkości maksymalizuje wydajność pompy ciepła. Inwerter dostosowuje zużytą energię do rzeczywistego zapotrzebowania. Wydłuża to żywotność sprężarki poprzez znaczne zmniejszenie liczby cykli włączania.",
+        "image": "m-tec-wps.png",
+        "details": "https://www.lg.com/content/dam/channel/wcms/pl/business/download/resources/ct40013991/Therma-V-Split_20220721_135105_.pdf",
+        "bulletpoints": [
+            "Moc grzewcza  10-36KW, moc grzewcza 36KW, 3F",
+            "Klasa energetyczna 35℃/55℃ A+++/A+++",
+            "Temperatura wody wypływającej do 62 ℃",
+            "Spawność COP B0/W35 5K (przy obciążeniu 100%) 4,4",
+            "SCOP 35℃ 5,2, SCOP 55℃ 3,9"
+        ]
+    },
+    {
+        "name": "M-TEC WPS 1052",
+        "description": "Gruntowa pompa ciepła wyższej wydajności. Opracowana przez pioniera pomp ciepła M-TEC z ponad 35-letnim doświadczeniem. Energia geotermalna dla pokoleń. Dzięki przetestowanej rocznej wydajności 6,0, gruntowa pompa ciepła jest jedną z najlepszych w swojej klasie. Inteligentna kontrola mocy. Zintegrowany systeme zarządzania energią. Nowa technologia wtrysku. Proaktywna reakcja na przyszłe zmiany prędkości maksymalizuje wydajność pompy ciepła. Inwerter dostosowuje zużytą energię do rzeczywistego zapotrzebowania. Wydłuża to żywotność sprężarki poprzez znaczne zmniejszenie liczby cykli włączania.",
+        "image": "m-tec-wps.png",
+        "details": "https://www.lg.com/content/dam/channel/wcms/pl/business/download/resources/ct40013991/Therma-V-Split_20220721_135105_.pdf",
+        "bulletpoints": [
+            "Moc grzewcza  10-52KW, moc grzewcza 51,4KW, 3F",
+            "Klasa energetyczna 35℃/55℃ A+++/A+++",
+            "Temperatura wody wypływającej do 62 ℃",
+            "Spawność COP B0/W35 5K (przy obciążeniu 100%) 4,3",
+            "SCOP 35℃ 5,4, SCOP 55℃ 4,0"
+        ]
+    }
+]

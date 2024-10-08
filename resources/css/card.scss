@@ -1,0 +1,106 @@
+.custom-card__container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+
+    @media only screen and (min-width: $bp-md) {
+        gap: 3vw;
+    }
+}
+
+.custom-card {
+    --size: 40vw;
+    --transition-time: 0.2s;
+
+    width: var(--size);
+    height: calc(var(--size)*1.0);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    background-color: var(--background-color);
+    padding: 5px;
+    text-align: center;
+    border: 5px var(--main-color) groove;
+    border-radius: 15px;
+    transition:
+        transform var(--transition-time) ease,
+        box-shadow var(--transition-time);
+
+    &__caption {
+        @extend .cool-font;
+        font-size: calc(0.80rem + 0.6vw);
+        color: var(--secondary-color);
+        line-height: normal;
+    }
+
+    &__icon {
+        --size: 70px;
+        transition: filter var(--transition-time) ease;
+
+        svg {
+            fill: var(--main-color);
+            width: var(--size);
+            height: var(--size);
+        }
+    }
+
+    &:hover,
+    &:active {
+        transform: scale(0.95);
+        box-shadow:
+            -1px 1px 25px 0px rgba(var(--main-color-rgb), 0.4),
+            inset -1px 1px 15px 0px rgba(var(--main-color-rgb), 0.4);
+
+        -webkit-box-shadow:
+            -1px 1px 25px 0px rgba(var(--main-color-rgb), 0.4),
+            inset -1px 1px 15px 0px rgba(var(--main-color-rgb), 0.4);
+
+        -moz-box-shadow:
+            -1px 1px 25px 0px rgba(var(--main-color-rgb), 0.4),
+            inset -1px 1px 15px 0px rgba(var(--main-color-rgb), 0.4);
+    }
+
+    &:hover &__icon,
+    &:active &__icon {
+        filter: brightness(130%);
+    }
+
+    @media only screen and (min-width: $bp-sm) {
+        --size: 35vw;
+        max-width: 250px;
+
+        &__caption {
+            font-size: 1.4rem;
+        }
+
+        &__icon {
+            --size: 100px;
+        }
+    }
+
+    @media only screen and (min-width: $bp-md) {
+        --size: 270px;
+        max-width: unset;
+
+        padding: 15px;
+
+        &__caption {
+            font-size: 1.7rem;
+        }
+
+        &__icon {
+            --size: 120px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Przekierowanie domeny dev.bulerenergy.pl do folderu /dev.bulerenergy/public
+    RewriteCond %{HTTP_HOST} ^dev\.bulerenergy\.pl$ [NC]
+    RewriteCond %{REQUEST_URI} !^/dev\.bulerenergy/public/
+    RewriteRule ^(.*)$ /dev.bulerenergy/public/$1 [L]
+
+    # Przekierowanie domeny bulerenergy.pl do folderu /bulerenergy/public
+    RewriteCond %{HTTP_HOST} ^(www\.)?bulerenergy\.pl$ [NC]
+    RewriteCond %{REQUEST_URI} !^/bulerenergy/public/
+    RewriteRule ^(.*)$ /bulerenergy/public/$1 [L]
+
+    # Opcjonalne przekierowanie na HTTPS
+    RewriteCond %{HTTPS} on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
