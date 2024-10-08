@@ -7,7 +7,7 @@
 
     <x-sections.hero dim="3" img="{{ asset('images/background_960x540.jpeg') }}">
         <div class="row align-items-center">
-            <img class="col-9 col-lg-4 m-auto" alt="logo firmy" src="{{ asset('images/logo_512.png') }}" />
+            <img class="col-9 col-lg-4 m-auto spin-enter" alt="logo firmy" src="{{ asset('images/logo_512.png') }}" />
             <div class="col-12">
                 <h1 class="--cool-font --bald ">
                     Buler Thermal Energy
@@ -37,7 +37,7 @@
                     [
                         'title' => 'Fotowoltaika',
                         'icon' => 'icons.fw-panel',
-                        'link' => route('in-progress'),
+                        'link' => route('fotovoltaic'),
                     ],
                     [
                         'title' => 'Magazyny energii',
@@ -50,9 +50,9 @@
                         'link' => route('trt-measurements'),
                     ],
                     [
-                        'title' => 'Audyty budynków',
+                        'title' => 'Świadectwo energetyczna',
                         'icon' => 'icons.building',
-                        'link' => route('in-progress'),
+                        'link' => route('energetic-passport'),
                     ],
                 ];
             @endphp

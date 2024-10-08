@@ -13,7 +13,7 @@ Route::controller(MainController::class)->group(function () {
     Route::prefix("/pompy-ciepla")->group(function () {
         Route::get('/', "heatpumps")->name("heatpumps.main");
         Route::get('/powietrzne', "airHeatpumps")->name("heatpumps.air");
-
+        
         Route::prefix("/gruntowe")->group(function(){
             Route::get('/', fn()=>view("heatpumps.main-ground"))->name("heatpumps.ground.main");
             Route::get('/glikol', "glycolHeatpumps")->name("heatpumps.ground.glycol");
@@ -22,6 +22,7 @@ Route::controller(MainController::class)->group(function () {
         });
     });
 
+    Route::get('/swiadectwo-energetyczne', fn()=>view("energetic-passport"))->name("energetic-passport");
     Route::get('/magazyny-energii', "batteries")->name("batteries");
     Route::get('/pomiary-trt', fn() => view("trt-measurements"))->name("trt-measurements");
     Route::get('/fotowoltaika', fn() => view("fotovoltaic"))->name("fotovoltaic");

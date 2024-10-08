@@ -1,4 +1,4 @@
-<x-layout title="Fotowoltaika" short-description="" description="" keywords="Pompy ciepła, wycena"
+<x-layout title="BTE - Fotowoltaika" short-description="" description="" keywords="Pompy ciepła, wycena"
     url="https://bulerenergy.pl">
 
     <x-sections.hero img="{{ asset('images/fotovoltaic-panel.jpg') }}">
@@ -11,8 +11,9 @@
                 7,7 kWh do 30,7 kWh
             </span>.
         </p>
-        <a role="button" href="" class="custom-btn custom-btn--contained center-block">formularz
-            ofertowy</a>
+        <a role="button" href="{{ route('contact') }}" class="custom-btn custom-btn--contained center-block">
+            Skontaktuj się
+        </a>
     </x-sections.hero>
 
 </x-layout>

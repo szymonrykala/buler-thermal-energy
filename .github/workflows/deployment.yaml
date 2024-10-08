@@ -5,53 +5,63 @@ on:
     inputs:
       environment:
         type: choice
-        description: Target env
-        options: 
-        - production
-        - dev
-      version:
-        required: true
+        description: target
+        options:
+          - bulerenergy
+          - dev.bulerenergy
 
 jobs:
-  laravel-tests:
+  deployment:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
-      with:
-        php-version: '8.3.12'
-    - uses: actions/checkout@v4
-    # - name: Copy .env
-    #   run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-    - name: Install PHP Dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist && npm
+      - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
+        with:
+          php-version: "8.3.12"
+      - uses: actions/checkout@v4
 
-    - name: Install Node Dependencies
-      run: npm install
+      - name: Copy .env
+        run: |
+          php -r "file_exists('.env') || copy('.env.prod', '.env');"
+          sed -i "s/<MAIL_USER>/${{secrets.EMAIL_USER}}/g" .env
+          sed -i "s/<MAIL_PASSWORD>/${{secrets.EMAIL_PASSWORD}}/g" .env
 
-    - name: Build
-      run: npm run build && php artisan:optimize
+      - name: Install PHP Dependencies
+        run: |
+          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --no-dev --optimize-autoloader
+          composer dump-autoload -o
 
-    - name: Generate key
-      run: php artisan key:generate
+      - name: Install Node Dependencies
+        run: npm install
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: serwer2494047.home.pl
-        username: ${{secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: public_html/bulerenergy/
-        local-dir: ./
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          resources/css/**
-          resources/js/**
-          tests
-          .editorconfig
-          artisan
-          ./*.json
-          ./*.xml
-          ./*.js
+      - name: Build
+        run: |
+          npm run build
+          php artisan optimize
+          php artisan config:cache
+          php artisan event:cache
+          php artisan route:cache
+          php artisan view:cache
+
+      - name: Generate key
+        run: php artisan key:generate
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: serwer2494047.home.pl
+          username: ${{secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ inputs.environment }}/
+          local-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            ./tests
+            .editorconfig
+            ./artisan
+            ./*.json
+            ./*.xml
+            ./*.js
+            ./.vscode
