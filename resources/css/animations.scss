@@ -57,12 +57,30 @@
     }
 }
 
-
-.slide-up-animation{
-    opacity:0;
+.slide-up-animation {
+    opacity: 0;
     --delay: 0.2s;
     animation: slide-from-down 0.8s ease var(--delay) 1 forwards;
     -webkit-animation: slide-from-down 0.8s ease var(--delay) 1 forwards;
+}
+
+@keyframes logo-enter {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotateZ(230deg);
+        -webkit-transform: scale(0.5) rotateZ(230deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotateZ(0deg);
+        -webkit-transform: scale(1) rotateZ(0deg);
+    }
+}
+
+.spin-enter {
+    animation: logo-enter 0.8s ease 0s 1 !important;
+    -webkit-animation: logo-enter 0.8s ease 0s 1 !important;
 }
 
 .on-show-animation {

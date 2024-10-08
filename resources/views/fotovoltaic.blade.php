@@ -1,4 +1,4 @@
-<x-layout title="Fotowoltaika" short-description="" description="" keywords="Pompy ciepła, wycena"
+<x-layout title="BTE - Fotowoltaika" short-description="" description="" keywords="Pompy ciepła, wycena"
     url="https://bulerenergy.pl">
 
     <x-sections.hero img="{{ asset('images/fotovoltaic-panel.jpg') }}">
