@@ -55,8 +55,6 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
-            ./resources/css/**
-            ./resources/js/**
             ./tests
             .editorconfig
             ./artisan
