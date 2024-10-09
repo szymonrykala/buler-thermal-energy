@@ -3,6 +3,16 @@ import './offer-form';
 import '../css/app.scss';
 import '../css/bootstrap-grid.css';
 
+import "./bootstrap/bootstrap.js"
+
+
+const myCarouselElement = document.querySelector('#heatpumpsCarousel')
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 5000,
+  touch: false,
+  pause:false,
+})
+
 
 function handleSideNav() {
     const sideNav = document.querySelector(".side-nav");

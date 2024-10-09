@@ -1,4 +1,4 @@
-@import "./vars.scss", "./components.scss", "./animations.scss", "./navigation.scss", "./form.scss", "./card.scss";
+@import "./vars.scss", "./components.scss", "./animations.scss", "./navigation.scss", "./form.scss", "./card.scss", "./carousel.scss";
 
 
 * {
@@ -235,7 +235,7 @@ p {
 }
 
 .bg-secondary {
-  background-color: rgba(var(--paper-color-rgb), 0.90);
+  background-color: rgba(var(--paper-color-rgb), 0.90) !important;
 }
 
 .bg-primary {

@@ -54,7 +54,7 @@
 
     <section class="container-fluid position-relative py-5">
         <div class="row p-3">
-            <img class="img-fluid img cover vh6" src="{{ asset('images/kolektor.jpg') }}"
+            <img class="img-fluid img img--cover vh6" src="{{ asset('images/kolektor.jpg') }}"
                 alt="pompa ciepła powietrze-woda">
 
             <div class="w-100 py-5 my-5"></div>

@@ -4,6 +4,7 @@
     keywords="Pompy ciepła, Magazyny energii, Rekuperacja, Pomiary TRT, Fotowoltaika, Audyty budynków, Piotr Buler"
     url="https://bulerenergy.pl">
 
+    <x-sections.carousel />
 
     <x-sections.hero img="{{ asset('/images/hydrosplit-hydro-box.png') }}">
         <h1 class="--bald">Pompy Ciepła</h1>
