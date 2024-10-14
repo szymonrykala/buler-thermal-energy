@@ -6,7 +6,7 @@
 
 
     <x-sections.hero img="{{ asset('/images/direct-evaporation-hero.jpg') }}">
-        <h1 class="--bald h1-title">Gruntowe Pompy Ciepła <br> Bezpośrednie parowanie</h1>
+        <h1 class="--bald h1-title text-shadow-5">Gruntowe Pompy Ciepła <br> Bezpośrednie parowanie</h1>
         <p>Ekologiczne i energooszczędne rozwiązania dla Twojego domu</p>
         <a href="#formularz-ofertowy" class="custom-btn custom-btn--contained center-block">formularz
             ofertowy</a>

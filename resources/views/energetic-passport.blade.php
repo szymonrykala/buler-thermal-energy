@@ -2,7 +2,7 @@
     url="https://bulerenergy.pl">
 
     <x-sections.hero img="{{ asset('/images/architect-guy.jpg') }}">
-        <h1 class="--bald h1-title">Świadectwo charakterystyki energetycznej</h1>
+        <h1 class="--bald h1-title text-shadow-5">Świadectwo charakterystyki energetycznej</h1>
         <a href="{{ route('contact') }}" class="custom-btn custom-btn--contained center-block">Skontaktuj się</a>
     </x-sections.hero>
 

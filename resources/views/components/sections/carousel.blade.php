@@ -1,6 +1,6 @@
 <section class="container-fluid">
     <div class="row">
-        <div id="heatpumpsCarousel" data-bs-ride="carousel" class="col-12 carousel carousel-dark carousel-fade slide">
+        <div id="heatpumpsCarousel" data-bs-ride="carousel" class="col-12 p-0 carousel carousel-dark carousel-fade slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#heatpumpsCarousel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -10,29 +10,22 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-block hero-content--dim3">
-                        <img src="{{ asset('images/architect-guy.jpg') }}" class="d-block w-100" alt="...">
+
+                @foreach ($entries as $item)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                        <img src="{{ $item->img }}" class="d-block w-100 img--cover" alt="{{ $item->title }}">
                         <div class="carousel-caption d-md-block">
-                            <h1 class="h1-title">First slide label</h1>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <h1 class="h1-title text-shadow-5">{{ $item->title }}</h1>
+                            <p class="h4">{{ $item->subtitle }}</p>
+                            @if (isset($item->link) && isset($item->link))
+                                <a role="button" href="{{ $item->link }}" class="custom-btn custom-btn--contained">
+                                    {{ $item->linkText }}
+                                </a>
+                            @endif
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('images/fotovoltaic-panel.jpg') }}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-md-block">
-                        <h1 class="h1-title">Second slide label</h1>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('images/couple-in-grass.png') }}" class="w-100" alt="...">
-                    <div class="carousel-caption d-md-block">
-                        <h1 class="h1-title">Third slide label</h1>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#heatpumpsCarousel"
                 data-bs-slide="prev">

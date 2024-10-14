@@ -6,7 +6,7 @@
 
 
     <x-sections.hero img="{{ asset('/images/soil-plant-hand.jpg') }}">
-        <h1 class="--bald h1-title">Gruntowe Pompy Ciepła</h1>
+        <h1 class="--bald h1-title text-shadow-5">Gruntowe Pompy Ciepła</h1>
         <p>Ekologiczne i energooszczędne rozwiązania dla Twojego domu</p>
         <a role="button" href="#formularz-ofertowy"
             class="custom-btn custom-btn--contained custom-btn--l center-block">formularz
