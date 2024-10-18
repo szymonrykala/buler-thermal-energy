@@ -22,14 +22,19 @@ jobs:
 
       - name: Copy .env
         run: |
-          php -r "file_exists('.env') || copy('.env.prod', '.env');"
+          php -r "copy('.env.prod', '.env');"
           sed -i "s/<MAIL_USER>/${{secrets.EMAIL_USER}}/g" .env
           sed -i "s/<MAIL_PASSWORD>/${{secrets.EMAIL_PASSWORD}}/g" .env
+          sed -i "s/<APP_KEY>/${{secrets.APP_KEY}}/g" .env
+          sed -i "s/<APP_DOMAIN>/${{inputs.environment}}/g" .env
 
       - name: Install PHP Dependencies
         run: |
           composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --no-dev --optimize-autoloader
           composer dump-autoload -o
+
+      - name: Generate key
+        run: php artisan key:generate
 
       - name: Install Node Dependencies
         run: npm install
@@ -37,14 +42,7 @@ jobs:
       - name: Build
         run: |
           npm run build
-          php artisan optimize
-          php artisan config:cache
-          php artisan event:cache
-          php artisan route:cache
-          php artisan view:cache
-
-      - name: Generate key
-        run: php artisan key:generate
+          php artisan view:clear
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -63,5 +61,14 @@ jobs:
             ./artisan
             ./*.json
             ./*.xml
-            ./*.js
-            ./.vscode
+            resources/js/**
+            resources/css/**
+            ./tests/**
+            ./storage/logs/**
+            .editorconfig
+            composer.lock
+            package-lock.json
+            package.json
+            phpunit.xml
+            vite.config.js
+
