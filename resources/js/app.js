@@ -3,7 +3,7 @@ import './offer-form';
 import '../css/app.scss';
 import '../css/bootstrap-grid.css';
 
-import "./bootstrap/bootstrap.js"
+import "./bootstrap.bundle.js"
 
 
 function handleSideNav() {
