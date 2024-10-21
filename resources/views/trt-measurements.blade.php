@@ -6,7 +6,7 @@
 
 
     <x-sections.hero img="{{ asset('/images/sand-tires.jpg') }}">
-        <h1 class="--bald h1-title">Badanie gruntu TRT</h1>
+        <h1 class="--bald h1-title text-shadow-5">Badanie gruntu TRT</h1>
         <p class="h4">Testy przewodnictwa cieplnego gruntu</p>
         <a role="button" href="{{route("contact")}}" class="custom-btn custom-btn--l custom-btn--contained center-block">Skontaktuj się</a>
     </x-sections.hero>

@@ -1,4 +1,4 @@
-@import "./vars.scss", "./components.scss", "./animations.scss", "./navigation.scss", "./form.scss", "./card.scss";
+@import "./vars.scss", "./components.scss", "./animations.scss", "./navigation.scss", "./form.scss", "./card.scss", "./carousel.scss";
 
 
 * {
@@ -156,6 +156,11 @@ h1,
   font-size: calc(1.8rem + 1.5vw);
 }
 
+@for $i from 1 through 5 {
+  .text-shadow-#{$i} {
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, calc(#{$i} * 0.2));
+  }
+}
 
 @media (min-width: 1200px) {
   .h1-title {
@@ -235,7 +240,7 @@ p {
 }
 
 .bg-secondary {
-  background-color: rgba(var(--paper-color-rgb), 0.90);
+  background-color: rgba(var(--paper-color-rgb), 0.90) !important;
 }
 
 .bg-primary {

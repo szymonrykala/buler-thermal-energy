@@ -48,7 +48,7 @@
 
     <section class="container-fluid position-relative w-100 py-5">
         <div class="row p-3">
-            <img class="img-fluid img cover vh6 w-100" src="{{ asset('images/lady-with-a-dog.jpg') }}"
+            <img class="img-fluid img img--cover vh6 w-100" src="{{ asset('images/lady-with-a-dog.jpg') }}"
                 alt="happy buyers of heatpump">
 
             <div class="w-100 py-4 my-5 py-md-5 my-md-5"></div>

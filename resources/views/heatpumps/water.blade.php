@@ -6,7 +6,7 @@
 
 
     <x-sections.hero img="{{ asset('/images/woda-woda-hero-image.jpg') }}">
-        <h1 class="--bald h1-title">Gruntowe Pompy Ciepła<br><span class="--colored">woda-woda</span></h1>
+        <h1 class="--bald h1-title text-shadow-5">Gruntowe Pompy Ciepła<br><span class="--colored">woda-woda</span></h1>
         <p>Ekologiczne i energooszczędne rozwiązania dla Twojego domu</p>
         <a href="{{ route('contact') }}" class="custom-btn custom-btn--contained center-block">Skontaktuj się</a>
     </x-sections.hero>
@@ -47,7 +47,7 @@
 
     <section class="container-fluid position-relative py-5">
         <div class="row p-3">
-            <img class="img-fluid img cover vh6" src="{{ asset('images/lady-with-a-pot.png') }}"
+            <img class="img-fluid img img--cover vh6" src="{{ asset('images/lady-with-a-pot.png') }}"
                 alt="gruntowa pompa ciepła woda-woda">
 
             <div class="w-100 py-5 my-5"></div>
