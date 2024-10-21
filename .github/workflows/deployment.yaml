@@ -22,11 +22,10 @@ jobs:
 
       - name: Copy .env
         run: |
-          php -r "copy('.env.prod', '.env');"
+          php -r "copy('.env.${{ inputs.environment }}', '.env');"
           sed -i "s/<MAIL_USER>/${{secrets.EMAIL_USER}}/g" .env
           sed -i "s/<MAIL_PASSWORD>/${{secrets.EMAIL_PASSWORD}}/g" .env
           sed -i "s/<APP_KEY>/${{secrets.APP_KEY}}/g" .env
-          sed -i "s/<APP_DOMAIN>/${{inputs.environment}}/g" .env
 
       - name: Install PHP Dependencies
         run: |
