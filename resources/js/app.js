@@ -3,6 +3,8 @@ import './offer-form';
 import '../css/app.scss';
 import '../css/bootstrap-grid.css';
 
+import "./bootstrap.bundle.js"
+
 
 function handleSideNav() {
     const sideNav = document.querySelector(".side-nav");
@@ -144,6 +146,15 @@ function main() {
     handleForm("#heatpump-offer-form");
 
     init_background_dynamic_scrolling_image()
+
+
+
+    const myCarouselElement = document.querySelector('#heatpumpsCarousel')
+    const carousel = new bootstrap.Carousel(myCarouselElement, {
+        interval: 5000,
+        touch: true,
+        pause: false,
+    })
 
 }
 

@@ -5,10 +5,10 @@
     url="https://bulerenergy.pl">
 
 
-    <x-sections.hero img="{{ asset('/images/hydrosplit-hydro-box.png') }}">
+    <x-sections.hero img="{{ asset('/images/mountains.jpg') }}">
         <h1 class="--bald">Gruntowe Pompy Ciepła</h1>
         <p>Ekologiczne i energooszczędne rozwiązania dla Twojego domu</p>
-        <a href="#formularz-ofertowy" class="custom-btn custom-btn--contained center-block">formularz
+        <a href="#formularz-ofertowy" class="custom-btn custom-btn--contained">formularz
             ofertowy</a>
     </x-sections.hero>
 
@@ -45,7 +45,7 @@
 
     <section class="container-fluid position-relative py-5">
         <div class="row p-3">
-            <img class="img-fluid img cover vh6" src="{{ asset('images/lady-with-a-pot.png') }}"
+            <img class="img-fluid img img--cover vh6" src="{{ asset('images/lady-with-a-pot.png') }}"
                 alt="pompa ciepła powietrze-woda">
 
             <div class="w-100 py-5 my-5"></div>
