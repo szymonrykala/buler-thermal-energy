@@ -1,7 +1,7 @@
-<x-layout title="Buler Thermal Energy - Gruntowe Pompy Ciepła"
-    short-description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji"
-    description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji, pomiarów TRT, fotowoltaiki oraz audytów budynków."
-    keywords="Pompy ciepła, Magazyny energii, Rekuperacja, Pomiary TRT, Fotowoltaika, Audyty budynków, Piotr Buler"
+<x-layout title="Gruntowe Pompy Ciepła - Glikol"
+    short-description="Gruntowe pompy ciepła z glikolem to ekologiczne i oszczędne rozwiązania do ogrzewania i chłodzenia domów. Wysoka efektywność energetyczna, niskie koszty eksploatacji oraz wielofunkcyjność sprawiają, że pompy te są idealnym wyborem dla domów energooszczędnych. Dowiedz się więcej i wybierz odpowiednie rozwiązanie dla siebie!"
+    description="Gruntowe pompy ciepła z glikolem to ekologiczne i oszczędne rozwiązania do ogrzewania i chłodzenia domów. Wysoka efektywność energetyczna, niskie koszty eksploatacji oraz wielofunkcyjność sprawiają, że pompy te są idealnym wyborem dla domów energooszczędnych. Dowiedz się więcej i wybierz odpowiednie rozwiązanie dla siebie!"
+    keywords="gruntowe pompy ciepła, pompy ciepła z glikolem, efektywność energetyczna, ekologiczne rozwiązania, oszczędność energii, ogrzewanie podłogowe, niskie koszty eksploatacji, wielofunkcyjne systemy grzewcze, domy energooszczędne, pompy ciepła do ogrzewania, systemy niskotemperaturowe, LG, M-tec, iDM"
     url="https://bulerenergy.pl">
 
 

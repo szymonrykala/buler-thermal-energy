@@ -1,7 +1,7 @@
 <x-layout title="Buler Thermal Energy - Pompy Ciepła"
-    short-description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji"
-    description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji, pomiarów TRT, fotowoltaiki oraz audytów budynków."
-    keywords="Pompy ciepła, Magazyny energii, Rekuperacja, Pomiary TRT, Fotowoltaika, Audyty budynków, Piotr Buler"
+    short-description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie gruntowych pomp ciepła, które wykorzystują odnawialne źródła energii do ogrzewania i chłodzenia budynków. Skorzystaj z naszego formularza ofertowego, aby otrzymać darmową wycenę dostosowaną do Twoich potrzeb."
+    description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie gruntowych pomp ciepła, które wykorzystują odnawialne źródła energii do ogrzewania i chłodzenia budynków. Skorzystaj z naszego formularza ofertowego, aby otrzymać darmową wycenę dostosowaną do Twoich potrzeb."
+    keywords="gruntowe pompy ciepła, odnawialne źródła energii, ogrzewanie, chłodzenie, Buler Thermal Energy, darmowa wycena, formularz ofertowy, innowacyjne technologie, efektywność energetyczna, ekologiczne rozwiązania"
     url="https://bulerenergy.pl">
 
 

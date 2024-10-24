@@ -54,22 +54,48 @@
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}">
 
+
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Buler Thermal Energy",
-            "url": "https://www.bulerenergy.pl",
-            "logo": "https://www.bulerenergy.pl/static/logo_512.png",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+48 664 435 690",
-                "contactType": "Customer Service",
-                "areaServed": "PL",
-                "availableLanguage": "Polish"
-            }
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Buler Thermal Energy",
+        "url": "https://bulerenergy.pl",
+        "logo": "https://www.bulerenergy.pl/static/logo_512.png",
+        "description": "Buler Thermal Energy oferuje innowacyjne rozwiązania w zakresie magazynów energii, fotowoltaiki, pomp ciepła, systemów grzewczych i chłodzących, wykorzystując odnawialne źródła energii. Specjalizujemy się w ekologicznych instalacjach grzewczych, oferując nowoczesne technologie dostosowane do potrzeb każdego klienta.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Podlaska 5",
+            "addressLocality": "Grudziądz",
+            "postalCode": "86-300",
+            "addressCountry": "PL"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+48 664 435 690",
+            "contactType": "Customer Service",
+            "availableLanguage": ["Polish"]
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/buler-thermal-energy/",
+            "https://www.facebook.com/piotr.buler.7"
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Piotr Buler",
+            "jobTitle": "CEO"
+        },
+        "areaServed": "PL",
+        "foundingDate": "2024",
+        "employee": {
+            "@type": "Person",
+            "name": "Piotr Buler",
+            "jobTitle": "CEO"
         }
+    }
     </script>
+
+    @stack('head')
 
     @env(['production'])
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XTNC675B0"></script>
@@ -96,7 +122,8 @@
                 "palette": "dark",
                 "language": "pl",
                 "page_load_consent_levels": ["strictly-necessary", "functionality", "tracking",
-                    "targeting"],
+                    "targeting"
+                ],
                 "notice_banner_reject_button_hide": false,
                 "preferences_center_close_button_hide": false,
                 "page_refresh_confirmation_buttons": false,
@@ -105,7 +132,8 @@
         });
     </script>
 
-    <noscript>Free cookie consent management tool by <a rel="nofollow" href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+    <noscript>Free cookie consent management tool by <a rel="nofollow"
+            href="https://www.termsfeed.com/">TermsFeed</a></noscript>
     <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
 
 </head>

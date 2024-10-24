@@ -1,4 +1,7 @@
-<x-layout title="Pompy ciepła - Darmowa wycena" short-description="" description="" keywords="Pompy ciepła, wycena"
+<x-layout title="Pompy ciepła - Darmowa wycena"
+    short-description="Skorzystaj z darmowej wyceny usług energetycznych oferowanych przez Buler Thermal Energy. Wypełnij formularz, aby uzyskać spersonalizowaną ofertę dla swojego projektu."
+    description="Skorzystaj z darmowej wyceny usług energetycznych oferowanych przez Buler Thermal Energy. Wypełnij formularz, aby uzyskać spersonalizowaną ofertę dla swojego projektu."
+    keywords="darmowa wycena, formularz wyceny, usługi energetyczne, instalacje, pompy ciepła, fotowoltaika, rekuperacja, audyty energetyczne, oszczędności energii"
     url="https://bulerenergy.pl">
 
     <main class="container py-5" id="formularz-ofertowy">

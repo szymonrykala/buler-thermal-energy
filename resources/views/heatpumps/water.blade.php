@@ -1,7 +1,7 @@
-<x-layout title="BTE - Gruntowe Pompy Ciepła Woda-Woda"
-    short-description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji"
-    description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji, pomiarów TRT, fotowoltaiki oraz audytów budynków."
-    keywords="Pompy ciepła, Magazyny energii, Rekuperacja, Pomiary TRT, Fotowoltaika, Audyty budynków, Piotr Buler"
+<x-layout title="Buler Thermal Energy - Gruntowe Pompy Ciepła Woda-Woda"
+    short-description="Gruntowe pompy ciepła woda-woda - nowoczesne, ekologiczne i energooszczędne systemy grzewcze. Dowiedz się, jak działają i dlaczego są idealnym rozwiązaniem do ogrzewania oraz chłodzenia Twojego domu. Wysoka efektywność, niskie koszty eksploatacji i niezawodność."
+    description="Gruntowe pompy ciepła woda-woda - nowoczesne, ekologiczne i energooszczędne systemy grzewcze. Dowiedz się, jak działają i dlaczego są idealnym rozwiązaniem do ogrzewania oraz chłodzenia Twojego domu. Wysoka efektywność, niskie koszty eksploatacji i niezawodność."
+    keywords="gruntowe pompy ciepła, pompy ciepła woda-woda, energia odnawialna, systemy grzewcze, czerpanie energii z wód gruntowych, efektywność energetyczna, niskie koszty eksploatacji, chłodzenie pomieszczeń, systemy niskotemperaturowe, ekologiczne ogrzewanie, LG, iDM, M-tec"
     url="https://bulerenergy.pl">
 
 

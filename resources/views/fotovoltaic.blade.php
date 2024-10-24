@@ -1,4 +1,7 @@
-<x-layout title="BTE - Fotowoltaika" short-description="" description="" keywords="Pompy ciepła, wycena"
+<x-layout title="BTE - Fotowoltaika"
+    short-description="Oferujemy kompleksowe usługi w zakresie instalacji systemów fotowoltaicznych, które pozwalają na wykorzystanie energii słonecznej. Zyskuj niezależność energetyczną i obniż rachunki za prąd!"
+    description="Oferujemy kompleksowe usługi w zakresie instalacji systemów fotowoltaicznych, które pozwalają na wykorzystanie energii słonecznej. Zyskuj niezależność energetyczną i obniż rachunki za prąd!"
+    keywords="fotowoltaika, panele słoneczne, energia odnawialna, instalacja fotowoltaiczna, systemy OZE, audyt energetyczny, dofinansowanie fotowoltaiki, oszczędności energetyczne, zrównoważony rozwój"
     url="https://bulerenergy.pl">
 
     <x-sections.hero img="{{ asset('images/fotovoltaic-panel.jpg') }}">

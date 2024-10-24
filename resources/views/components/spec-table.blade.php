@@ -1,8 +1,9 @@
 <section class='row spec-{{ $id }}'>
     <div class='col-12 col-lg-4 col-xl-3'>
         <div class='row g-2'>
+
             @foreach ($specifications as $spec)
-                <div class='col-12'>
+                <div class='col-12' id="{{$spec->title}}">
                     <div class='spec__item {{ $spec->default ? 'spec__item--default' : '' }}'>
                         <input type='radio' name='spec-view-input-{{ $id }}'
                             id='item-{{ $loop->index }}-{{ $id }}'>
@@ -27,7 +28,62 @@
                         @endforeach
                     </section>
                 </div>
+
+@push('head')
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "{{$spec->title}}",
+        "image": "https://bulerenergy.pl/images/lg-monoblok.png",
+        "description": "Dowiedz się więcej o {{$spec->title}} od M-tec System.",
+        "hasEnergyConsumptionDetails": {
+            "hasEnergyEffiencyCategory": "https://schema.org/EUEnergyEfficiencyCategoryA3Plus"
+        },
+        "url": "{{ url()->current() }}#{{$spec->title}}",
+        "review": {
+            "@type": "Review",
+            "name": "Recenzja {{$spec->title}} od M-tec systems",
+            "author": {
+                "@type": "Person",
+                "name": "Piotr Buler"
+            },
+            "positiveNotes": {
+                "@type": "ItemList",
+                "itemListElement": [
+                    @foreach ($spec->params as $param)
+                        {
+                        "@type": "ListItem",
+                        "position": {{$loop->index}},
+                        "name": "{{$param->label}} - {{$param->value}}"
+                        }
+                        @if(!$loop->last) , @endif
+                    @endforeach
+                ]
+            }
+        },
+        "audience": {
+            "@type": "PeopleAudience",
+            "suggestedGender": "male",
+            "suggestedMinAge": 13
+        },
+        "additionalProperty": [
+            @foreach ($spec->params as $param)
+                {
+                    "@type": "PropertyValue",
+                    "name": "{{$param->label}}",
+                    "value": "{{$param->value}}"
+                }
+                @if(!$loop->last) , @endif
             @endforeach
+        ]
+    }
+</script>
+@endpush
+
+
+            @endforeach
+
         </div>
     </div>
     <div class='d-none d-lg-block col-lg-8 col-xl-9 ps-5 spec__display'>

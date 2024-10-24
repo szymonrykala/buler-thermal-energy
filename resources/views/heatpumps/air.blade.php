@@ -1,7 +1,7 @@
-<x-layout title="Buler Thermal Energy - Pompy Ciepła Powietrze Woda"
-    short-description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji"
-    description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji, pomiarów TRT, fotowoltaiki oraz audytów budynków."
-    keywords="Pompy ciepła, Magazyny energii, Rekuperacja, Pomiary TRT, Fotowoltaika, Audyty budynków, Piotr Buler"
+<x-layout title="Pompy Ciepła Powietrze - Woda"
+    short-description="Odkryj nowoczesne pompy ciepła powietrze-woda, które łączą efektywność energetyczną z ekologicznymi rozwiązaniami. Nasze systemy ogrzewania i chłodzenia zapewniają komfort przez cały rok, przyczyniając się do znaczącej oszczędności energii. Zadzwoń lub napisz, aby uzyskać więcej informacji oraz dostosowaną ofertę!"
+    description="Odkryj nowoczesne pompy ciepła powietrze-woda, które łączą efektywność energetyczną z ekologicznymi rozwiązaniami. Nasze systemy ogrzewania i chłodzenia zapewniają komfort przez cały rok, przyczyniając się do znaczącej oszczędności energii. Zadzwoń lub napisz, aby uzyskać więcej informacji oraz dostosowaną ofertę!"
+    keywords="pompy ciepła, powietrze-woda, ogrzewanie, chłodzenie, systemy grzewcze, energia odnawialna, efektywność energetyczna, ekologiczne rozwiązania, oszczędność energii, instalacja pomp ciepła, klimatyzacja, systemy HVAC, komfort termiczny"
     url="https://bulerenergy.pl">
 
 
@@ -54,7 +54,8 @@
             <div class="w-100 py-4 my-5 py-md-5 my-md-5"></div>
             <div class="w-100 my-4 my-md-5"></div>
 
-            <div class="col offset-md-1 col-md-8 col-lg-7 col-xl-6 p-3 p-md-4 bg-secondary blur-2 round-3 on-show-animation">
+            <div
+                class="col offset-md-1 col-md-8 col-lg-7 col-xl-6 p-3 p-md-4 bg-secondary blur-2 round-3 on-show-animation">
                 <h2>Jakie ma zalety?</h2>
                 <ul>
                     <li> <b>Oszczędność energii</b>:<br> Wykorzystują darmową energię z powietrza, znacznie

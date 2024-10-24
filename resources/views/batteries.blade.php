@@ -4,26 +4,6 @@
     keywords="Magazyny energii, Energy-Butler, Energy-Block, M-TEC, modułowy system magazynowania energii, fotowoltaika, system all in one, Buler Thermal Energy"
     url="https://bulerenergy.pl/magazyny-energii">
 
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "Magazyny Energii",
-            "image": "https://www.bulerenergy.pl/static/energy-butler.png",
-            "description": "Buler Thermal Energy oferuje modułowe systemy magazynowania energii, w tym Energy-Butler i Energy-Block od M-TEC, idealne dla domów jednorodzinnych i użytku komercyjnego.",
-            "brand": {
-                "@type": "Brand",
-                "name": "M-TEC"
-            },
-            "offers": {
-                "@type": "Offer",
-                "url": "https://www.bulerenergy.pl/magazyny-energii",
-                "priceCurrency": "PLN",
-                "availability": "https://schema.org/InStock"
-            }
-        }
-    </script>
-
     <x-sections.hero dim="1" img="{{ asset('images/energy-butler.jpg') }}">
         <h1 class="--bald">
             Magazyn energii <span class="--cool-font --colored --bald">all-in-one</span><br>

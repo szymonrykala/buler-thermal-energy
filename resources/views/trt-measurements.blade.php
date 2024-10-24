@@ -1,14 +1,43 @@
-<x-layout title="Badania TRT - Buler Thermal Energy"
-    short-description="Instalacja systemu magazynowania energii Energy-Butler od M-TEC jest łatwa i efektywna. Oferujemy rozwiązania zarówno dla domów jednorodzinnych, jak i dla użytku komercyjnego."
-    description="Buler Thermal Energy oferuje modułowe systemy magazynowania energii, w tym Energy-Butler i Energy-Block od M-TEC, idealne dla domów jednorodzinnych i użytku komercyjnego. Zintegrowane inwertery i wysoka wydajność zapewniają niezależność energetyczną i maksymalne zużycie energii słonecznej."
-    keywords="Magazyny energii, Energy-Butler, Energy-Block, M-TEC, modułowy system magazynowania energii, fotowoltaika, system all in one, Buler Thermal Energy"
+<x-layout title="Badania Gruntu TRT - Buler Thermal Energy"
+    short-description="Profesjonalne badania gruntu TRT (Thermal Response Test) dla systemów geotermalnych. Zwiększ efektywność energetyczną swojego budynku. Skontaktuj się z nami!"
+    description="Profesjonalne badania gruntu TRT (Thermal Response Test) dla systemów geotermalnych. Zwiększ efektywność energetyczną swojego budynku. Skontaktuj się z nami!"
+    keywords="badania gruntu, TRT, Thermal Response Test, geotermalne, pompy ciepła, efektywność energetyczna, analiza termiczna, energia odnawialna, projektowanie systemów grzewczych"
     url="https://bulerenergy.pl/magazyny-energii">
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Badania Gruntu TRT",
+        "provider": {
+            "@type": "Organization",
+            "name": "Buler Thermal Energy",
+            "url": "https://bulerenergy.pl",
+            "logo": "https://bulerenergy.pl/images/logo_112.png",
+            "sameAs": "https://www.linkedin.com/company/buler-thermal-energy/"
+        },
+        "description": "Oferujemy profesjonalne badania gruntu TRT, które pozwalają na ocenę zdolności gruntów do przewodzenia ciepła, co jest kluczowe przy projektowaniu systemów geotermalnych.",
+        "additionalType": "http://www.productontology.org/id/Service",
+        "url": "https://bulerenergy.pl/badania-trt",
+        "areaServed": {
+            "@type": "Place",
+            "name": "Polska"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "PLN",
+            "price": "Do ustalenia",
+            "itemCondition": "http://schema.org/NewCondition",
+            "availability": "http://schema.org/InStock",
+            "url": "https://bulerenergy.pl/badania-trt"
+        }
+    }
+    </script>
 
     <x-sections.hero img="{{ asset('/images/sand-tires.jpg') }}">
         <h1 class="--bald h1-title text-shadow-5">Badanie gruntu TRT</h1>
         <p class="h4">Testy przewodnictwa cieplnego gruntu</p>
-        <a role="button" href="{{route("contact")}}" class="custom-btn custom-btn--l custom-btn--contained center-block">Skontaktuj się</a>
+        <a role="button" href="{{ route('contact') }}" class="custom-btn custom-btn--l custom-btn--contained center-block">Skontaktuj się</a>
     </x-sections.hero>
 
 
@@ -63,5 +92,5 @@
         </div>
     </section>
 
-    <x-sections.contact/>
+    <x-sections.contact />
 </x-layout>

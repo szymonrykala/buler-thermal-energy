@@ -1,7 +1,7 @@
-<x-layout title="Buler Thermal Energy - Gruntowe Pompy Ciepła"
-    short-description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji"
-    description="Buler Thermal Energy oferuje kompleksowe usługi w zakresie pomp ciepła, magazynów energii, rekuperacji, pomiarów TRT, fotowoltaiki oraz audytów budynków."
-    keywords="Pompy ciepła, Magazyny energii, Rekuperacja, Pomiary TRT, Fotowoltaika, Audyty budynków, Piotr Buler"
+<x-layout title="Gruntowe Pompy Ciepła - Bezpośrednie Parowanie"
+    short-description="Gruntowe pompy ciepła bezpośredniego parowania to ekologiczne i energooszczędne rozwiązania dla Twojego domu. Wysoka efektywność, niskie koszty eksploatacji i długowieczność sprawiają, że są idealnym wyborem do ogrzewania i chłodzenia. Dowiedz się więcej o zaletach gruntowych pomp ciepła i skorzystaj z naszej oferty!"
+    description="Gruntowe pompy ciepła bezpośredniego parowania to ekologiczne i energooszczędne rozwiązania dla Twojego domu. Wysoka efektywność, niskie koszty eksploatacji i długowieczność sprawiają, że są idealnym wyborem do ogrzewania i chłodzenia. Dowiedz się więcej o zaletach gruntowych pomp ciepła i skorzystaj z naszej oferty!"
+    keywords="gruntowe pompy ciepła, bezpośrednie parowanie, efektywność energetyczna, niskie koszty eksploatacji, ogrzewanie, chłodzenie, ekologiczne rozwiązania, energooszczędne, COP, systemy grzewcze, ogrzewanie podłogowe, oszczędności energetyczne, pompy ciepła do domów, iDM, M-tec, LG"
     url="https://bulerenergy.pl">
 
 

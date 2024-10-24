@@ -28,6 +28,26 @@
                     </div>
                 </section>
             </div>
+
+            @push('head')
+                <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "{{$partner->name}}",
+                    "url": "{{$partner->link}}",
+                    "logo": "https://mtec-energy.com/logo.png",
+                    "description": "{{$partner->description}}",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Aumühlweg 20",
+                        "addressLocality": "Pinsdorf",
+                        "postalCode": "A-4812",
+                        "addressCountry": "AT"
+                    }
+                }
+                </script>
+            @endpush
         @endforeach
 
     </div>
